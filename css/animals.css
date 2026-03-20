@@ -1,0 +1,339 @@
+
+.animals__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.animals__window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 105px;
+    height: 100%;
+}
+
+.animals__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.animals__border {
+    width: 105px;
+    height: 96px;
+    animation: rotate 3s linear infinite;
+}
+
+.animal__icon {
+    position: absolute;
+    width: 76px;
+    height: 73px;
+    top: 12px;
+}
+
+.animals__item p {
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 100%;
+    color: #2D2D2D;
+    text-transform: uppercase;
+}
+
+@keyframes rotate {
+   from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.animals__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    gap: 20px;
+    width: calc(100% - 105px - 50px);
+}
+.animals__container h2 {
+    font-family: 'Rubik';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.animals__container p {
+    font-family: 'Rubik';
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.animals__video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.animals__video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: 0;
+}
+
+.animals__cam {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1em 0;
+}
+.animals__cam-active{
+    transform: scale(1);
+    transition: 0.2s;
+    max-height: 100%;
+}
+.animals__cam-unactive {
+    transform: scale(0);
+    transition: 0.2s;
+    max-height: 0;
+}
+ 
+.cam__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cam__title h2 {
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+.cam__title button {
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 400;
+    font-family: 'Roboto';
+}
+
+.cams__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cams__toggle-arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid black;
+  transition: transform 0.3s ease;
+}
+
+.arrow-top {
+    transform: rotate(180deg);
+}
+
+.cam__container {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    display: flex;
+}
+
+.cam__item {
+    width: 250px;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.cam-active {
+    transform: scale(1.2);
+}
+
+.icon{
+  rotate: 180deg;
+  width:22px;
+  height:22px;
+  align-items:center;
+  justify-content:center;
+  transition: 0.3s;
+  position: absolute;
+  right: 20px;
+}
+
+.rotate-icon {
+    rotate: 360deg;
+}
+.acc--item {
+    max-height: 0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+.open {
+    max-height: 73px;
+}
+.animal--mobile {
+    display: none;
+}
+.animals--mobile {
+    display: none;
+}
+.animals__window a {
+    width: 100%;
+}
+.mobile__item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid #488D92;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0.5em;
+}
+.mobile__item p {
+    font-family: 'Roboto';
+    font-size: 12px;
+    line-height: 100%;
+    font-weight: 400;
+}
+
+.animals__information--block {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.animals--information {
+    width: 40%;
+}
+.animals--facts {
+    width: 55%;
+}
+.animals--block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+}
+.animals--block h2 {
+    font-size: 24px;
+    font-family: 'Rubik';
+    font-weight: 400;
+    line-height: 100%;
+}
+.animals--block div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.animals--block div p {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+}
+.animals--block div a {
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 400;
+    text-decoration: underline;
+    color: #0D444D;
+}
+.facts--text {
+  display:flex;
+  gap:10px;
+}
+
+.facts--text:before{
+  content:"";
+  width:24px;
+  height:24px;
+  background:url("../images/camera/pero.png") center/contain no-repeat;
+  flex-shrink:0;
+}
+.gorillas--cam {
+    width: 250px;
+}
+@media screen and (max-width: 990px) {
+    .cam__container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cam-active {
+        transform: scale(1.1);
+    }
+    .cam__container {
+        gap: 20px;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    .animals__wrapper {
+        flex-direction: column;
+    }
+    .animal--desctop {
+        display: none;
+    }
+    .animals__wrapper {
+        gap: 10px;
+    }
+    .animals__container {
+        width: 100%;
+    }
+    .animals--mobile {
+        display: flex;
+        flex-direction: column;
+        background-color: #2A8086;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .animals__window {
+        gap: 0;
+    }
+
+    .animals__information--block {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .animals--facts, .animals--information {
+        width: 100%;
+    }
+    .animals--block {
+        gap: 10px;
+    }
+}

@@ -1,0 +1,203 @@
+.map {
+    width: 100%;
+    height: 100%;
+    background-color: #2A8086;
+}
+
+.map__title {
+    font-size: 24px;
+    line-height: 100%;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+}
+
+ .map__wrapper {
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    overflow: hidden;
+    overflow: scroll;
+  }
+ .map__content {
+    position: relative;
+    width: 1467px;
+    height: 912px;
+    transform-origin: 0 0;
+  }
+
+  .world__map {
+    position: absolute;
+    inset: 0;
+    background: url("../images/map/Map.svg") center no-repeat;
+    background-size: contain;
+  }
+
+  .zoom-controls {
+    padding: 10px;
+    bottom: 32px;
+    right: 32px;
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+    justify-content: flex-end;
+  }
+
+  .zoom-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .zoom-btn:hover {
+    background: rgba(255,255,255,0.15);
+  }
+
+  .point {
+    position: absolute;
+    width: 100px;
+    height: 103px;
+    overflow: hidden;
+  }
+
+
+  .eagles-map {
+    left: 160px;
+    top: 390px;
+  }
+
+  .aligator-map {
+    left: 300px;
+    top: 470px;
+  }
+  .penguin-map {
+    left: 370px;
+    top: 800px;
+  }
+  .gorila-map {
+    left: 710px;
+    top: 540px;
+  }
+  .elephante-map {
+    left: 750px;
+    top: 710px;
+  }
+  .panda-map {
+    left: 980px;
+    top: 410px;
+  }
+
+.point-border {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.point-inner {
+  position: absolute;
+  top: 12px;
+  left: 13px;
+}
+
+
+
+  @media screen and (max-width: 1200px) {
+    .map__content {
+        width: 1140px;
+        height: 685px;
+    }
+    .eagles-map {
+      left: 130px;
+      top: 270px;
+    }
+    .aligator-map {
+      left: 225px;
+      top: 330px;
+    }
+    .penguin-map {
+      left: 290px;
+      top: 595px;
+    }
+    .gorila-map {
+      left: 540px;
+      top: 390px;
+    }
+    .elephante-map {
+      left: 580px;
+      top: 520px;
+    }
+    .panda-map {
+      left: 750px;
+      top: 300px;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .map__content {
+        width: 640px;
+        height: 495px;
+    }
+    .point {
+      width: 73px;
+      height: 70px;
+    }
+    .point-border {
+      width: 73px;
+      height: 70px;
+    }
+    .point-inner {
+      top: 7px;
+      left: 12px;
+      width: 50px;
+      height: 52px;
+    }
+      .eagles-map {
+      left: 60px;
+      top: 200px;
+    }
+    .aligator-map {
+      left: 110px;
+      top: 220px;
+    }
+    .penguin-map {
+      left: 150px;
+      top: 370px;
+    }
+    .gorila-map {
+      left: 295px;
+      top: 255px;
+    }
+    .elephante-map {
+      left: 300px;
+      top: 350px;
+    }
+    .panda-map {
+      left: 420px;
+      top: 210px;
+    }
+  }
+
+
+  .point-border{
+    transform-origin: center;
+    animation: rotatePoint 6s linear infinite;
+}
+
+
+
+@keyframes rotatePoint{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

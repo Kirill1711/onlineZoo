@@ -1,0 +1,76 @@
+
+
+.container {
+    width: 1570px;
+    height: 100%;
+    margin: auto;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 100%;
+}
+
+.color-white {
+    color: #C5E1E5;
+}
+
+.color-black {
+    color: #0D444D;
+}
+.color-bamboo {
+    color: #216E7A;
+}
+.color-yellow {
+    color: #FFF5BA;
+}
+.hero-text {
+    color: #F3F7F8;
+}
+
+.pets-arrow-right, .pets-arrow-left, .beautiful-btn {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1600px) {
+    .container {
+        width: 1440px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 1024px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 990px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .container {
+        width: 768px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 640px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        width: 320px;
+    }
+}

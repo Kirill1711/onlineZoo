@@ -1,0 +1,173 @@
+header {
+    background-color: #2A8086;
+    width: 100%;
+    height: 100%;
+    padding: 2em 0;
+}
+
+.header__wrapper {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px
+}
+nav a {
+    font-size: 18px;
+    line-height: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s;
+    font-family: 'Roboto';
+}
+
+
+
+nav a::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #C5E1E5;
+  transition: 0.3s;
+  margin-bottom: -5px;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.auth-form a {
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: all 0.1s;
+    border-radius: 25px;
+    border: 2px solid #2A8086;
+}
+
+.auth-form a:hover {
+    border: 2px solid #C5E1E5;
+}
+
+.burgermenu-icons {
+    width: 32px;
+    height: 32px;
+    display: none;   
+}
+.active-burger {
+    display: flex;
+}
+
+.unactive-block {
+    display: none;
+}
+
+.burger-menu-block {
+    padding: 2em 0 0 0;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    flex-direction: column;
+}
+.burger-menu-block a {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.open-burger {
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+.open-burger span {
+    width: 30px;
+    height: 2px;
+    background-color: #C5E1E5;
+}
+.close-burger {
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    cursor: pointer;
+}
+.close-burger span {
+    width: 30px;
+    height: 2px;
+    position: relative;
+    transform: rotate(45deg);
+    background-color: #C5E1E5;
+}
+.close-burger span::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #C5E1E5;
+    transform: rotate(90deg);
+}
+.blur-effect {
+  box-shadow: 1px 0px 10px #12575B;
+  width: 100%;
+  display: block;
+  height: 1px;
+  background-color: #125758;
+}
+.logo--large {
+    width: 108px;
+    height: 84px;
+}
+@media screen and (max-width: 990px) {
+    nav a, .auth-form a {
+        font-size: 16px;
+    }
+    nav {
+        gap: 1.5em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 1em 0;
+    }
+    nav a, .auth-form a {
+        display: none;
+    }
+    .burgermenu-icons {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        padding: 0;
+    }
+    .logo--large {
+        width: 49px;
+        height: 38px;
+    }
+}

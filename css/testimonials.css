@@ -1,0 +1,121 @@
+.testimonials {
+    width: 100%;
+    height: 100%;
+    background-color: #E5EAEB;
+    position:  relative;
+    padding: 2em 0;
+}
+.testimonials__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.feedback-block {
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    border: 1px solid #19707D;
+    border-radius: 25px;
+    padding: 14px 20px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 10%;
+    color: #19707D;
+    text-transform: uppercase;
+}
+
+.testimonials__wrapper h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: 'Rubik';
+    letter-spacing: 0%;
+    font-weight: 400;
+}
+
+.feedback {
+    margin: 1em 0;
+    justify-content: center;
+}
+
+.testimonials__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3em 0;
+}
+.testimonials__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+}
+
+.cloud-content {
+    width: 485px;
+    height: 195px;
+    background-image: url('../images/content/say.svg');
+    background-position: center;
+    background-size: cover;
+    padding: 40px;
+}
+.cloud-content span {
+    color: #B3B3B3;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+}
+.cloud-content p {
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    color: #2D2D2D;
+}
+
+.item__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1440px) {
+    .cloud-content {
+        width: 380px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .cloud-content {
+        width: 300px;
+        height: 155px;
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .testimonials__inner {
+        flex-wrap: wrap;
+    }
+    .cloud-content {
+        width: 350px;
+        height: 170px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cloud-content {
+        width: 320px;
+        height: 150px;
+    }
+    .testimonials__inner {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

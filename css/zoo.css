@@ -1,0 +1,17 @@
+.zoo-donate {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 50px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .zoo-donate {
+        bottom: 20px;
+    }
+}

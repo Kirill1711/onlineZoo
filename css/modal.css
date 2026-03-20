@@ -1,0 +1,324 @@
+.modal__create-account, .modal__auth, .modal__contact-us, .modal__leave-feedback, .modal__donate-to-volunteers {
+  position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(5px);
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.modal-active {
+  display: flex;
+}
+.modal-unactive {
+  display: none;
+}
+.modal__header {
+    width: 520px;
+    height: 100px;
+    background-color: #2A8086;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 20px 0 0;
+}
+.logo--modal {
+  width: 78px;
+  height: 61px;
+}
+.modal__contact-us-header, .modal__leave-feedback-header, .modal__donate-to-volunteers-header {
+  text-transform: uppercase;
+  width: 520px;
+  height: 100px;
+  background-color: #E5E5E5;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-family: 'Rubik';
+  border-radius: 20px 20px 0 0;
+  padding: 1em;
+}
+.modal__content {
+    width: 520px;
+    background-color: #E5E5E5;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  border-bottom: 1px solid #cfd8dc;
+}
+
+.tab {
+  width: 167px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.tab.active {
+  color: #2A8086;
+  border-bottom: 2px solid #2A8086;
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background: #2A8086;
+}
+
+/* Social buttons */
+
+.social-buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.social {
+  flex: 1;
+  width: 200px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  gap: 1em;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Roboto';
+}
+
+.google--logo, .facebook--logo {
+  width: 24px;
+  height: 24px;
+}
+
+.facebook img {
+  border-radius: 50%;
+}
+/* Form */
+
+.form, .donate-form, .contact-form, .feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label, .donate-form label, .contact-form label, .feedback-form label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  margin-top: 10px;
+  color: #546e6e;
+  font-family: 'Roboto';
+}
+
+.form input, .donate-form input, .contact-form input, .feedback-form input{
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #FFFFFF;
+  font-size: 16px;
+}
+
+form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #FFFFFF;
+  font-size: 16px;
+  resize: none;
+}
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #546e6e;
+  align-items: center;
+}
+
+.checkbox input {
+  margin-top: 3px;
+}
+
+.checkbox a {
+  color: #2A8086;
+  text-decoration: underline;
+}
+
+/* Submit button */
+
+.submit-btn {
+  margin-top: 15px;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: #2A8086;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  background: #2A8086;
+}
+
+.modal__content p {
+  font-size: 16px;
+  line-height: 100%;
+  font-family: 'Roboto';
+  color: #2D2D2D;
+  font-style: italic;
+  
+}
+
+
+.payment-type {
+  display: flex;
+  margin-top: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #2A8086;
+}
+
+.payment-type button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #FFFFFF;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.payment-type .active {
+  background: #2A8086;
+  color: #FFFFFF;
+}
+
+.amounts {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.amount {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #2A8086;
+  background: #FFFFFF;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.amount.active {
+  background: #2A8086;
+  color: #f4f4f4;
+}
+
+.card-colum {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.card-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card-wrapper {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 2px 16px;
+    width: 100%;
+}
+
+.card-wrapper svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.card-number {
+  flex: 2;
+}
+
+.card-small {
+  flex: 1;
+}
+.secure {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #2D2D2D;
+  font-family: 'Roboto';
+}
+.cart-lable-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.american-express {
+  width: 14px;
+  height: 14px;
+}
+.visa {
+  width: 33px;
+  height: 14px;
+}
+.mastercard {
+  width: 22px;
+  height: 14px;
+}
+.maestro {
+  width: 18px;
+  height: 14px;
+}
+
+
+@media screen and (max-width: 640px) {
+  .modal__create-account, .modal__auth, .modal__contact-us, .modal__leave-feedback, .modal__donate-to-volunteers {
+    padding: 1em;
+    justify-content: flex-start;
+  }
+  .modal__header, .modal__contact-us-header, .modal__leave-feedback-header, .modal__donate-to-volunteers-header {
+    width: 100%;
+    height: 80px;
+  }
+  .modal__content {
+    width: 100%;
+    padding: 1em;
+  }
+  .card-row input {
+    width: 40%;
+  }
+}
+

@@ -1,0 +1,245 @@
+.payandfeed {
+    width: 100%;
+    height: 100%;
+    background-color: #E5EAEB;
+    position:  relative;
+    padding: 2em 0;
+}
+
+.payandfeedtopbg {
+    width: 100%;
+    height: 570px;
+    background-image: url('../images/content/Vector-pay-and-feed-top.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.payandfeedbottonbg {
+    width: 100%;
+    height: 610px;
+    background-image: url('../images/content/Vector-pay-and-feed-botton.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.payandfeed-tree {
+    position: absolute;
+    left: 200px;
+    top: 50px;
+}
+.payandfeed-smalltree {
+    position: absolute;
+    left: 61%;
+    top: 4%;
+}
+.payandfeed-bamboo {
+    position: absolute;
+    right: 10%;
+    top: 39%;
+    animation: bambooSwing 4s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.payandfeed__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 6em;
+    position: relative;
+    z-index: 100;
+}
+.payandfeed__wrapper h2 {
+    font-size: 24px;
+    line-height: 100%;
+    text-transform: uppercase;
+    font-family: 'Rubik';
+    font-weight: 400;
+    padding-left: 50px;
+}
+.payanddonate {
+    padding: 14px 70px;
+    background-color: #C5E1E5;
+    border-radius: 25px;
+    margin-right: 50px;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    position: relative;
+    z-index: 50;
+}
+
+.payanddonate:hover {
+    filter: drop-shadow(2px 3px 5px #c5e1e5);
+}
+
+.payandfeed__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 7em;
+    gap: 1em;
+    position: relative;
+    z-index: 50;
+}
+.donate__item p {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Roboto';
+}
+
+.donate__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.donate__arrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+}
+.donate__arrow span {
+    width: 95%;
+    height: 1px;
+    background-color: #C5E1E5;
+}
+
+.card--icon {
+    width: 24px;
+    height: 24px;
+}
+.lock--icon {
+    width: 13px;
+    height: 14px;
+}
+.american-express--icon {
+    width: 13px;
+    height: 14px;
+}
+.visa--icon {
+    width: 34px;
+    height: 11px;
+}
+.master-card--icon {
+    width: 22px;
+    height: 15px;
+}
+.maestrocard--icon {
+    width: 19px;
+    height: 15px;
+}
+.donate--icon {
+    width: 64px;
+    height: 64px;
+}
+.donate-arrow-icon {
+    width: 17px;
+    height: 23px;
+}
+.feedback--icon {
+    width: 24px;
+    height: 24px;
+}
+
+
+@media screen and (max-width: 1920px) {
+    .payandfeed-tree {
+        left: 1%;
+    }
+    .payandfeed-smalltree {
+        left: 64%;
+    }
+    .payandfeed-bamboo {
+        right: 0;
+        top: 38%;
+    }
+}
+
+
+@media screen and (max-width: 1440px) {
+    .payandfeed__wrapper h2 {
+        padding: 0;
+    }
+    .payandfeed__wrapper a {
+        margin: 0;
+    }
+     .payandfeed-bamboo {
+        right: 10px;
+        top: 38%;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .payanddonate {
+        padding: 14px 40px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .payandfeed__wrapper {
+      padding-top: 10em;
+    }
+    .payandfeed__inner {
+        padding-top: 3em;
+    }
+    .donate__arrow {
+        display: flex;
+        justify-content: center;
+    }
+      .donate__arrow span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .donate-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5em;
+  }
+  .payandfeed__wrapper {
+    padding-top: 11em;
+  }
+  .payandfeed__inner {
+    padding-top: 1.5em;
+  }
+}
+
+@media screen and (max-width: 640px) {
+    .payandfeed__wrapper {
+        padding: 0;
+    }
+    .payandfeed__inner {
+        flex-direction: column;
+        padding: 1em 0;
+    }
+    .donate__arrow, .payandfeed-tree, .payandfeed-smalltree, .payandfeed-bamboo {
+        display: none;
+    }
+
+    .payandfeedbottonbg {
+        height: 630px;
+        background-position: -1100px;
+    }
+    .circle-mobile {
+        width: 100px;
+        height: 100px;
+    }
+    .payanddonate {
+        margin-right: 0;
+    }
+    .payandfeedtopbg {
+        background-position: -1100px;
+        height: 600px;
+    }
+    .payandfeed__wrapper h2 {
+        color: #0D444D;
+    }
+}

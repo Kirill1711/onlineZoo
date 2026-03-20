@@ -1,0 +1,109 @@
+.not-exist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.img-fzf {
+    margin-top: 3em;
+    width: 357px;
+    height: auto;
+}
+.not-exist p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto';
+    margin-top: 1em;
+}
+.not-exist button {
+    width: 250px;
+    height: 52px;
+    background-color: #19707D;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto';
+    color: #F3F7F8;
+}
+
+.not-exist button:hover {
+    background-color: #2A808D;
+}
+
+.not-exist-panda {
+    width: 100%;
+    height: 510px;
+    background-color: transparent;
+    position: relative;
+}
+
+.not-exist-panda-top {
+    height: 550px;
+}
+
+.not-exist-panda-bottom {
+    background-color: #2A808D;
+    background-image: none;
+    background-position: none;
+    height: 120px;
+    top: 390px;
+}
+
+.not-exist-tree-one {
+    position: absolute;
+    left: 300px;
+    bottom: 250px;
+
+}
+.not-exist-tree-two {
+    position: absolute;
+    right: 100px;
+    bottom: 70px;
+}
+.not-exist-penguin {
+    position: absolute;
+    left: 470px;
+    bottom: 150px;
+}
+
+@media screen and (max-width: 1440px) {
+    .not-exist-tree-one {
+        left: 150px;
+    }
+    .not-exist-penguin {
+        left: 320px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .not-exist-tree-one {
+        left: 30px;
+    }
+    .not-exist-tree-two {
+        right: 30px;
+    }
+    .not-exist-penguin {
+        left: 200px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+     .not-exist-tree-one, .not-exist-tree-two, .not-exist-penguin {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .img-fzf {
+        width: 300px;
+    }
+    .not-exist-icon {
+        left: 35%;
+    }
+    .not-exist-bamboo {
+        left: 55%;
+    }
+}
