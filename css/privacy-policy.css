@@ -1,0 +1,16 @@
+.privacy-policy {
+    padding: 0.5em;
+}
+
+.privacy-policy h2 {
+    font-family: 'Rubik';
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.privacy-policy p {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto';
+    margin-top: 10px;
+}
