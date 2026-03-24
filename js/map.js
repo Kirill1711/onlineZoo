@@ -12,6 +12,9 @@ let minScale = 0.8;
 let containerWidth = container.offsetWidth;
 
 function transformMap(btn) {
+    if (!btn) {
+        return;
+    } else {
     btn.addEventListener('click', function () {
 
         if (btn === zoomInBtn && scale < maxScale) {
@@ -24,6 +27,7 @@ function transformMap(btn) {
         map.style.transform = `scale(${scale})`;
         updateMarkerPositions(containerWidth, scale);
     });
+    }
 }
 
 function updateMarkerPositions (containerWidth, scale) {

@@ -1,5 +1,9 @@
 //404 button back to home
+const backHomeBtn = document.querySelector('.back-home');
 
-document.querySelector('.back-home').addEventListener('click', function () {
+if(backHomeBtn) {
+
+backHomeBtn.addEventListener('click', function () {
     window.location.href = 'index.html';
 });
+}

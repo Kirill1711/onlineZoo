@@ -37,10 +37,12 @@
     height: 510px;
     background-color: transparent;
     position: relative;
+    background-color: #fff !important;
 }
 
 .not-exist-panda-top {
     height: 550px;
+    overflow: hidden;
 }
 
 .not-exist-panda-bottom {

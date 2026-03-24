@@ -185,6 +185,7 @@
   transition: 0.3s;
   position: absolute;
   right: 20px;
+  cursor: pointer;
 }
 
 .rotate-icon {
@@ -194,6 +195,7 @@
     max-height: 0;
     overflow:hidden;
     transition:max-height .4s ease;
+    width: 100%;
 }
 .open {
     max-height: 73px;
@@ -204,9 +206,7 @@
 .animals--mobile {
     display: none;
 }
-.animals__window a {
-    width: 100%;
-}
+
 .mobile__item {
     position: relative;
     width: 100%;
