@@ -125,7 +125,7 @@
 
 @media screen and (max-width: 1920px) {
     .panda__bamboo {
-        left: 0;
+        left: 5px;
     }
     .tree-one {
         left: 12%;
@@ -139,6 +139,9 @@
 }
 
 @media screen and (max-width: 1440px) {
+     .panda__bamboo {
+        left: 10px;
+    }
     .bamboo-one {
         display: none;
     }

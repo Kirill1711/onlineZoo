@@ -303,6 +303,9 @@ form textarea {
   height: 14px;
 }
 
+.message-auth, .message-reg, .message-contact {
+  margin-top: 7px;
+}
 
 @media screen and (max-width: 640px) {
   .modal__create-account, .modal__auth, .modal__contact-us, .modal__leave-feedback, .modal__donate-to-volunteers {
