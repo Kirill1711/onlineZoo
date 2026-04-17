@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -254,8 +241,12 @@
                 </nav>
 
                 <div class="auth-form">
-                    <a class="color-white log-in" href="#">Log in</a>
+                    <a class="color-white log-in" href="#">Вход</a>
                     <a class="color-white sign-up" href="#">Sign up</a>
+                </div>
+                <div id="dashboard" style="display:none;">
+                    <p>Добро пожаловать, <span id="userName"></span>!</p>
+                    <button id="logout">Выйти</button>
                 </div>
                 <div class="burgermenu-icons">
                     <div class="open-burger active-burger">
@@ -285,7 +276,7 @@
         </div><!--container-->
     </header>
 
-<div class="modal__create-account modal-unactive">
+<div id="regForm" class="modal__create-account modal-unactive">
 	<div class="modal__header">
         <svg class="logo--modal">
             <use href="#logo"></use>
@@ -293,50 +284,49 @@
     </div>
     <div class="modal__content">
         <div class="tabs">
-        <button class="tab create-account active">CREATE ACCOUNT</button>
-        <button class="tab log-in">LOG IN</button>
+        <button class="tab create-account active">СОЗДАТЬ АККАУНТ</button>
+        <button class="tab log-in">ВХОД</button>
       </div>
         <div class="social-buttons">
         <button class="social google">
             <svg class="google--logo">
                 <use href="#google-logo"></use>
             </svg>
-          Google Sign in
+          Вход через Google
         </button>
 
         <button class="social facebook">
            <svg class="facebook--logo">
                 <use href="#facebook-logo"></use>
             </svg>
-          Facebook Sign in
+          Вход через Facebook
         </button>
       </div>
 
       <form class="form">
-        <label class="color-black">NAME</label>
-        <input type="text" />
+        <label class="color-black">ИМЯ</label>
+        <input type="text"  name="name"/>
 
         <label class="color-black">EMAIL</label>
-        <input type="email" />
+        <input type="email" name="email"/>
 
-        <label class="color-black">PASSWORD</label>
-        <input type="password" />
+        <label class="color-black">ПАРОЛЬ</label>
+        <input type="password" name="password"/>
 
         <div class="checkbox">
           <input type="checkbox" id="agree" />
           <label  for="agree">
-            Agree with the <a href="./user-agreement.html">User Agreement</a> and <a href="./privacy-policy.html">Privacy Policy</a>
+            Согласны с <a href="./user-agreement.html">Пользовательским соглашением</a> и <a href="./privacy-policy.html">Политикой конфиденциальности</a>
           </label>
         </div>
-
-        <button class="submit-btn">SEND</button>
+        <p id="message-reg"></p>
+        <button id="registred-btn" class="submit-btn">ОТПРАВИТЬ</button>
       </form>
 
     </div>
 </div><!--modal__create-account-->
 
-
-<div class="modal__auth modal-unactive">
+<div id="authForm" class="modal__auth modal-unactive">
 	<div class="modal__header">
         <svg class="logo--modal">
             <use href="#logo"></use>
@@ -344,61 +334,61 @@
     </div>
     <div class="modal__content">
         <div class="tabs">
-        <button class="tab create-account">CREATE ACCOUNT</button>
-        <button class="tab log-in active">LOG IN</button>
+        <button class="tab create-account">СОЗДАТЬ АККАУНТ</button>
+        <button class="tab log-in active">ВХОД</button>
       </div>
         <div class="social-buttons">
         <button class="social google">
             <svg class="google--logo">
                 <use href="#google-logo"></use>
             </svg>
-          Google Sign in
+          Вход через Google
         </button>
 
         <button class="social facebook">
             <svg class="facebook--logo">
                 <use href="#facebook-logo"></use>
             </svg>
-          Facebook Sign in
+          Вход через Facebook
         </button>
       </div>
 
       <form class="form">
 
         <label class="color-black">EMAIL</label>
-        <input type="email" />
+        <input name="email" type="email" />
 
-        <label class="color-black">PASSWORD</label>
-        <input type="password" />
-
-        <button class="submit-btn">SEND</button>
+        <label class="color-black">ПАРОЛЬ</label>
+        <input name="password" type="password" />
+        <p id="message-auth"></p>
+        <button id="auth-btn" class="submit-btn">ОТПРАВИТЬ</button>
       </form>
 
     </div>
 </div><!--modal__auth-->
 
-<div class="modal__contact-us modal-unactive">
+<div id="contactForm" class="modal__contact-us modal-unactive">
     <div class="modal__contact-us-header">
-        <h2 class="color-black">Contact Us</h2>
+        <h2 class="color-black">Свяжитесь с нами</h2>
     </div>
     <div class="modal__content">
          <form class="contact-form">
-        <label class="color-black">NAME</label>
-        <input type="text" />
+        <label class="color-black">ИМЯ</label>
+        <input name="name" type="text" />
 
         <label class="color-black">EMAIL</label>
-        <input type="email" />
+        <input name="email" type="email" />
 
-        <label class="color-black">YOUR MESSEGE</label>
-        <textarea type="text"></textarea>
-
-        <button class="submit-btn">SEND</button>
+        <label class="color-black">ВАШЕ СООБЩЕНИЕ</label>
+        <textarea name="text" type="text"></textarea>
+        <p id="message-contact"></p>
+        <button id="contact-btn" class="submit-btn">ОТПРАВИТЬ</button>
       </form>
     </div>
-</div>
+</div><!--modal__contact-us-->
 
 <section class="privacy-policy">
-    <h2  class="color-black">User Agreement</h2>
+    <h2  class="color-black">Пользовательское соглашение</h2>
 
 <h2  class="color-black">Welcome to our Online Zoo. By accessing and using this website, you agree to comply with the following terms and conditions.</h2>
 
@@ -467,11 +457,26 @@
         </div>
     </footer>
 
-  <script src="./js/animals.js"></script>
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-content">
+    <p>
+      Мы используем cookies для улучшения работы сайта. Вы можете принять или настроить их.
+    </p>
+    <div class="cookie-buttons">
+      <button id="accept-cookies" class="btn accept">Принять</button>
+      <button id="decline-cookies" class="btn decline">Отклонить</button>
+    </div>
+  </div>
+</div>
+
+    <script src="./js/animals.js"></script>
     <script src="./js/backhome.js"></script>
     <script src="./js/burger.js"></script>
     <script src="./js/map.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/cooke.js"></script>
 </body>
 </html>

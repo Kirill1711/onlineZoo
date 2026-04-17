@@ -34,7 +34,7 @@
 
 
 
-    <title>Online ZOO</title>
+    <title>Онлайн Зоопарк</title>
 </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
@@ -235,17 +235,22 @@
                     <svg class="logo--large">
                         <use href="#logo"></use>
                     </svg>
-                    <a class="color-white" href="./index.html">About</a>
-                    <a class="color-white" href="./map.html">Map</a>
-                    <a class="color-white" href="./panda.html">Zoos</a>
-                    <a class="color-white contact-us" href="#">Contact us</a>
-                    <a class="color-white" href="#">Design</a>
+                    <a class="color-white" href="./index.html">О нас</a>
+                    <a class="color-white" href="./map.html">Карта</a>
+                    <a class="color-white" href="./panda.html">Зоопарки</a>
+                    <a class="color-white contact-us" href="#">Свяжитесь с нами</a>
+                    <a class="color-white" href="#">Дизайн</a>
                 </nav>
 
-                <div class="auth-form">
-                    <a class="color-white log-in" href="#">Log in</a>
-                    <a class="color-white sign-up" href="#">Sign up</a>
+                <div id="auth-form" class="auth-form">
+                    <a class="color-white log-in" href="#">Вход</a>
+                    <a class="color-white sign-up" href="#">Регистрация</a>
                 </div>
+                <div id="dashboard" style="display:none;">
+                    <p>Добро пожаловать, <span id="userName"></span>!</p>
+                    <button id="logout">Выйти</button>
+                </div>
+                
                 <div class="burgermenu-icons">
                     <div class="open-burger active-burger">
                         <span></span>
@@ -263,18 +268,18 @@
         <span class="blur-effect"></span>
         <div class="container">
               <div class="burger-menu-block unactive-block">
-                    <a class="color-white" href="./index.html"><b>About</b></a>
-                    <a class="color-white" href="./map.html"><b>Map</b></a>
-                    <a class="color-white" href="./panda.html"><b>Zoos</b></a>
-                    <a class="color-white contact-us" href="#"><b>Contact us</b></a>
-                    <a class="color-white" href="#"><b>Design</b></a>
-                    <a class="color-white log-in" href="#"><b>My account</b></a>
+                    <a class="color-white" href="./index.html"><b>О нас</b></a>
+                    <a class="color-white" href="./map.html"><b>Карта</b></a>
+                    <a class="color-white" href="./panda.html"><b>Зоопарки</b></a>
+                    <a class="color-white contact-us" href="#"><b>Свяжитесь с нами</b></a>
+                    <a class="color-white" href="#"><b>Дизайн</b></a>
+                    <a class="color-white log-in" href="#"><b>Мой аккаунт</b></a>
                 </div>
 
         </div><!--container-->
     </header>
 
-<div class="modal__create-account modal-unactive">
+<div id="regForm" class="modal__create-account modal-unactive">
 	<div class="modal__header">
         <svg class="logo--modal">
             <use href="#logo"></use>
@@ -282,50 +287,50 @@
     </div>
     <div class="modal__content">
         <div class="tabs">
-        <button class="tab create-account active">CREATE ACCOUNT</button>
-        <button class="tab log-in">LOG IN</button>
+        <button class="tab create-account active">СОЗДАТЬ АККАУНТ</button>
+        <button class="tab log-in">ВХОД</button>
       </div>
         <div class="social-buttons">
         <button class="social google">
             <svg class="google--logo">
                 <use href="#google-logo"></use>
             </svg>
-          Google Sign in
+          Вход через Google
         </button>
 
         <button class="social facebook">
            <svg class="facebook--logo">
                 <use href="#facebook-logo"></use>
             </svg>
-          Facebook Sign in
+          Вход через Facebook
         </button>
       </div>
 
       <form class="form">
-        <label class="color-black">NAME</label>
-        <input type="text" />
+        <label class="color-black">ИМЯ</label>
+        <input type="text"  name="name"/>
 
         <label class="color-black">EMAIL</label>
-        <input type="email" />
+        <input type="email" name="email"/>
 
-        <label class="color-black">PASSWORD</label>
-        <input type="password" />
+        <label class="color-black">ПАРОЛЬ</label>
+        <input type="password" name="password"/>
 
         <div class="checkbox">
           <input type="checkbox" id="agree" />
           <label  for="agree">
-            Agree with the <a href="./user-agreement.html">User Agreement</a> and <a href="./privacy-policy.html">Privacy Policy</a>
+            Согласны с <a href="./user-agreement.html">Пользовательским соглашением</a> и <a href="./privacy-policy.html">Политикой конфиденциальности</a>
           </label>
         </div>
-
-        <button class="submit-btn">SEND</button>
+        <p id="message-reg"></p>
+        <button id="registred-btn" class="submit-btn">ОТПРАВИТЬ</button>
       </form>
 
     </div>
 </div><!--modal__create-account-->
 
 
-<div class="modal__auth modal-unactive">
+<div id="authForm" class="modal__auth modal-unactive">
 	<div class="modal__header">
         <svg class="logo--modal">
             <use href="#logo"></use>
@@ -333,58 +338,58 @@
     </div>
     <div class="modal__content">
         <div class="tabs">
-        <button class="tab create-account">CREATE ACCOUNT</button>
-        <button class="tab log-in active">LOG IN</button>
+        <button class="tab create-account">СОЗДАТЬ АККАУНТ</button>
+        <button class="tab log-in active">ВХОД</button>
       </div>
         <div class="social-buttons">
         <button class="social google">
             <svg class="google--logo">
                 <use href="#google-logo"></use>
             </svg>
-          Google Sign in
+          Вход через Google
         </button>
 
         <button class="social facebook">
             <svg class="facebook--logo">
                 <use href="#facebook-logo"></use>
             </svg>
-          Facebook Sign in
+          Вход через Facebook
         </button>
       </div>
 
       <form class="form">
 
         <label class="color-black">EMAIL</label>
-        <input type="email" />
+        <input name="email" type="email" />
 
-        <label class="color-black">PASSWORD</label>
-        <input type="password" />
-
-        <button class="submit-btn">SEND</button>
+        <label class="color-black">ПАРОЛЬ</label>
+        <input name="password" type="password" />
+        <p id="message-auth"></p>
+        <button id="auth-btn" class="submit-btn">ОТПРАВИТЬ</button>
       </form>
 
     </div>
 </div><!--modal__auth-->
 
-<div class="modal__contact-us modal-unactive">
+<div id="contactForm" class="modal__contact-us modal-unactive">
     <div class="modal__contact-us-header">
-        <h2 class="color-black">Contact Us</h2>
+        <h2 class="color-black">Свяжитесь с нами</h2>
     </div>
     <div class="modal__content">
          <form class="contact-form">
-        <label class="color-black">NAME</label>
-        <input type="text" />
+        <label class="color-black">ИМЯ</label>
+        <input name="name" type="text" />
 
         <label class="color-black">EMAIL</label>
-        <input type="email" />
+        <input name="email" type="email" />
 
-        <label class="color-black">YOUR MESSEGE</label>
-        <textarea type="text"></textarea>
-
-        <button class="submit-btn">SEND</button>
+        <label class="color-black">ВАШЕ СООБЩЕНИЕ</label>
+        <textarea name="text" type="text"></textarea>
+        <p id="message-contact"></p>
+        <button id="contact-btn" class="submit-btn">ОТПРАВИТЬ</button>
       </form>
     </div>
-</div>
+</div><!--modal__contact-us-->
 
 
     <main>
@@ -393,12 +398,12 @@
             <div class="hero">
                 <div class="hero__container">
                     <h1 class="hero-text">
-                        Watch your favorite <b>animals online</b>
+                        Смотрите своих любимых <b>животных онлайн</b>
                     </h1>
-                    <p class="hero-text">Observe different animals from around the world online in live time. Help vulunteers to take a good care of animals, donate to your favorite ones.</p>
+                    <p class="hero-text">Смотрите разных животных со всего мира в режиме реального времени. Помогите волонтерам ухаживать за животными, пожертвуйте вашим любимым.</p>
                     <div class="mobil-section">
-                        <a class="hero__watch" href="./panda.html">Watch now </a>
-                        <a class="hero__donate donate-to-valunteers" href="#">Donate</a>
+                        <a class="hero__watch" href="./panda.html">Смотреть сейчас </a>
+                        <a class="hero__donate donate-to-valunteers" href="#">Пожертвовать</a>
                     </div>
                 </div><!--hero__container-->
                 <div class="hero__container">
@@ -427,7 +432,7 @@
     <section class="howitwork">
         <div class="container">
             <div class="howitwork__wrapper">
-                <h2 class="color-black">How it works</h2>
+                <h2 class="color-black">Как это работает</h2>
             </div>
             <div class="howitwork__inner">
 
@@ -437,7 +442,7 @@
                             <use href="#how-it-work-icon-1"></use>
                         </svg>
                     </div>
-                    <p class="color-black">Keep an eye on your favourite animals online</p>
+                    <p class="color-black">Следите за своими любимыми животными онлайн</p>
                 </div>
                 <div class="howitwork__item">
                     <div class="circle">
@@ -445,7 +450,7 @@
                             <use href="#how-it-work-icon-2"></use>
                         </svg>
                     </div>
-                    <p class="color-black">Become a part of the communtity</p>
+                    <p class="color-black">Станьте частью сообщества</p>
                 </div>
                 <div class="howitwork__item">
                     <div class="circle">
@@ -453,7 +458,7 @@
                             <use href="#how-it-work-icon-3"></use>
                         </svg>
                     </div>
-                    <p class="color-black">Support animals with the donations</p>
+                    <p class="color-black">Поддерживайте животных пожертвованиями</p>
                 </div>
 
             </div>
@@ -478,12 +483,12 @@
     <section class="petsinzoo">
         <div class="container">
             <div class="petsinzoo__wrapper">
-                <h2 class="color-black">Pets in zoo </h2>
+                <h2 class="color-black">Животные в зоопарке </h2>
                 <a class="color-black desctop-block" href="#">
                     <svg class="heart--icon">
                         <use href="#heart--icon"></use>
                     </svg>
-                    Choose your Favorite</a>
+                    Выберите своего любимца</a>
             </div>
 
 
@@ -646,28 +651,28 @@
                      <svg class="heart--icon">
                         <use href="#heart--icon"></use>
                     </svg>
-                    Choose your Favorite</a>
+                    Выберите своего любимца</a>
             </div>
         </div><!--container-->
     </section><!--petsinzoo-->
 
     <div class="modal__donate-to-volunteers modal-unactive">
     <div class="modal__donate-to-volunteers-header">
-        <h2 class="color-black">Donate to volunteers</h2>
+        <h2 class="color-black">Пожертвовать волонтерам</h2>
     </div>
     <div class="modal__content">
         <p class="color-black">
-            Support your favourite animals. It is as simple as buying a cup of coffee.
+            Поддержите своих любимых животных. Это как просто купить чашку кофе.
         </p>
          <form class="donate-form">
         
-        <label>CHOOSE AN ANIMAL</label>
+        <label>ВЫБЕРИТЕ ЖИВОТНОЕ</label>
       <input type="text">
 
-      <label>PAYMENTS</label>
+      <label>ПЛАТЕЖИ</label>
       <div class="payment-type">
-        <button type="button" class="active">Monthly</button>
-        <button type="button">One-time</button>
+        <button type="button" class="active">Ежемесячно</button>
+        <button type="button">Один раз</button>
       </div>
 
       <div class="amounts">
@@ -677,7 +682,7 @@
         <button type="button" class="amount">$25</button>
       </div>
 
-        <label class="color-black">NAME</label>
+        <label class="color-black">ИМЯ</label>
         <input type="text" />
 
         <label class="color-black">EMAIL</label>
@@ -713,7 +718,7 @@
         </div>
       </div>
 
-        <button class="submit-btn">SEND</button>
+        <button class="submit-btn">ОТПРАВИТЬ</button>
 
          <div class="secure">
             <svg class="lock--icon">
@@ -734,7 +739,7 @@
                 <div class="container">
                     <div class="payandfeed__wrapper">
                         <h2 class="color-white">Pay and feed</h2>
-                        <a class="color-black payanddonate desctop-block donate-to-valunteers" href="#">Donate to volunteers</a>
+                        <a class="color-black payanddonate desctop-block donate-to-valunteers" href="#">Пожертвовать волонтерам</a>
                     </div>
 
                     <div class="payandfeed__inner">
@@ -782,7 +787,7 @@
 
                     </div>
 
-                    <a class="color-black payanddonate mobil-block donate-mobile donate-to-valunteers" href="#">Donate to volunteers</a>
+                    <a class="color-black payanddonate mobil-block donate-mobile donate-to-valunteers" href="#">Пожертвовать волонтерам</a>
                 </div>
             </div>
         </div>
@@ -795,20 +800,20 @@
 
     <div class="modal__leave-feedback modal-unactive">
     <div class="modal__leave-feedback-header">
-        <h2 class="color-black">Leave feedback</h2>
+        <h2 class="color-black">Оставить отзыв</h2>
     </div>
     <div class="modal__content">
          <form class="feedback-form">
-        <label class="color-black">NAME</label>
+        <label class="color-black">ИМЯ</label>
         <input type="text" />
 
         <label class="color-black">EMAIL</label>
         <input type="email" />
 
-        <label class="color-black">YOUR MESSEGE</label>
+        <label class="color-black">ВАШЕ СООБЩЕНИЕ</label>
         <textarea rows="5" type="text"></textarea>
 
-        <button class="submit-btn">SEND</button>
+        <button class="submit-btn">ОТПРАВИТЬ</button>
       </form>
     </div>
 </div>
@@ -816,12 +821,12 @@
     <section class="testimonials">
         <div class="container">
             <div class="testimonials__wrapper">
-                <h2 class="color-black">Testimonials</h2>
+                <h2 class="color-black">Отзывы</h2>
                 <a class="desctop-block feedback-block leave-feedback" href="#">
                     <svg class="feedback--icon">
                         <use href="#feedback--icon"></use>
                     </svg>
-                    Leave feedback</a>
+                    Оставить отзыв</a>
             </div>
 
 
@@ -865,7 +870,7 @@
             <a class="mobil-block feedback feedback-block leave-feedback" href="#">
                 <svg class="feedback--icon">
                     <use href="#feedback--icon"></use>
-                </svg>Leave feedback</a>
+</svg>Оставить отзыв</a>
         </div>
     </section>
 
@@ -1001,11 +1006,26 @@
         </div>
     </footer>
 
+    <div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-content">
+    <p>
+      Мы используем cookies для улучшения работы сайта. Вы можете принять или настроить их.
+    </p>
+    <div class="cookie-buttons">
+      <button id="accept-cookies" class="btn accept">Принять</button>
+      <button id="decline-cookies" class="btn decline">Отклонить</button>
+    </div>
+  </div>
+</div>
+
     <script src="./js/animals.js"></script>
     <script src="./js/backhome.js"></script>
     <script src="./js/burger.js"></script>
     <script src="./js/map.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/cooke.js"></script>
 </body>
 </html>

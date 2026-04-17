@@ -25,6 +25,7 @@ function closemodal (modal) {
         }
     });
 }
+
 //modal create account
 const openmodalcreateaccount = document.querySelector('.sign-up');
 const modalcreateaccount = document.querySelector('.modal__create-account');
@@ -86,9 +87,10 @@ openmodal(openmodalleavefeedback, modalleavefeedback);
 closemodal(modalleavefeedback);
 
 //modal donate to valunteers
-
 const openmodaldonatetovalunteeers = document.querySelectorAll('.donate-to-valunteers');
 const modaldonatetovalunteers = document.querySelector('.modal__donate-to-volunteers');
+
+const openmodalchoseanimals = document.querySelector('')
 
 openmodal(openmodaldonatetovalunteeers, modaldonatetovalunteers);
 closemodal(modaldonatetovalunteers);

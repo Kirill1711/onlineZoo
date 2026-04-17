@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="./css/animals.css">
+    <link rel="stylesheet" href="./css/animals.css">
     <link rel="stylesheet" href="./css/beautifulanimals.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/general.css">
@@ -240,7 +240,7 @@
                 </nav>
 
                 <div class="auth-form">
-                    <a class="color-white log-in" href="#">Log in</a>
+                    <a class="color-white log-in" href="#">Вход</a>
                     <a class="color-white sign-up" href="#">Sign up</a>
                 </div>
                 <div class="burgermenu-icons">
@@ -270,8 +270,8 @@
 
         </div><!--container-->
     </header>
-
-<div class="modal__create-account modal-unactive">
+    
+<div id="regForm" class="modal__create-account modal-unactive">
 	<div class="modal__header">
         <svg class="logo--modal">
             <use href="#logo"></use>
@@ -279,50 +279,50 @@
     </div>
     <div class="modal__content">
         <div class="tabs">
-        <button class="tab create-account active">CREATE ACCOUNT</button>
-        <button class="tab log-in">LOG IN</button>
+        <button class="tab create-account active">СОЗДАТЬ АККАУНТ</button>
+        <button class="tab log-in">ВХОД</button>
       </div>
         <div class="social-buttons">
         <button class="social google">
             <svg class="google--logo">
                 <use href="#google-logo"></use>
             </svg>
-          Google Sign in
+          Вход через Google
         </button>
 
         <button class="social facebook">
            <svg class="facebook--logo">
                 <use href="#facebook-logo"></use>
             </svg>
-          Facebook Sign in
+          Вход через Facebook
         </button>
       </div>
 
       <form class="form">
-        <label class="color-black">NAME</label>
-        <input type="text" />
+        <label class="color-black">ИМЯ</label>
+        <input type="text"  name="name"/>
 
         <label class="color-black">EMAIL</label>
-        <input type="email" />
+        <input type="email" name="email"/>
 
-        <label class="color-black">PASSWORD</label>
-        <input type="password" />
+        <label class="color-black">ПАРОЛЬ</label>
+        <input type="password" name="password"/>
 
         <div class="checkbox">
           <input type="checkbox" id="agree" />
           <label  for="agree">
-            Agree with the <a href="./user-agreement.html">User Agreement</a> and <a href="./privacy-policy.html">Privacy Policy</a>
+            Согласны с <a href="./user-agreement.html">Пользовательским соглашением</a> и <a href="./privacy-policy.html">Политикой конфиденциальности</a>
           </label>
         </div>
-
-        <button class="submit-btn">SEND</button>
+        <p id="message-reg"></p>
+        <button id="registred-btn" class="submit-btn">ОТПРАВИТЬ</button>
       </form>
 
     </div>
 </div><!--modal__create-account-->
 
 
-<div class="modal__auth modal-unactive">
+<div id="authForm" class="modal__auth modal-unactive">
 	<div class="modal__header">
         <svg class="logo--modal">
             <use href="#logo"></use>
@@ -330,78 +330,78 @@
     </div>
     <div class="modal__content">
         <div class="tabs">
-        <button class="tab create-account">CREATE ACCOUNT</button>
-        <button class="tab log-in active">LOG IN</button>
+        <button class="tab create-account">СОЗДАТЬ АККАУНТ</button>
+        <button class="tab log-in active">ВХОД</button>
       </div>
         <div class="social-buttons">
         <button class="social google">
             <svg class="google--logo">
                 <use href="#google-logo"></use>
             </svg>
-          Google Sign in
+          Вход через Google
         </button>
 
         <button class="social facebook">
             <svg class="facebook--logo">
                 <use href="#facebook-logo"></use>
             </svg>
-          Facebook Sign in
+          Вход через Facebook
         </button>
       </div>
 
       <form class="form">
 
         <label class="color-black">EMAIL</label>
-        <input type="email" />
+        <input name="email" type="email" />
 
-        <label class="color-black">PASSWORD</label>
-        <input type="password" />
-
-        <button class="submit-btn">SEND</button>
+        <label class="color-black">ПАРОЛЬ</label>
+        <input name="password" type="password" />
+        <p id="message-auth"></p>
+        <button id="auth-btn" class="submit-btn">ОТПРАВИТЬ</button>
       </form>
 
     </div>
 </div><!--modal__auth-->
 
-<div class="modal__contact-us modal-unactive">
+<div id="contactForm" class="modal__contact-us modal-unactive">
     <div class="modal__contact-us-header">
-        <h2 class="color-black">Contact Us</h2>
+        <h2 class="color-black">Свяжитесь с нами</h2>
     </div>
     <div class="modal__content">
          <form class="contact-form">
-        <label class="color-black">NAME</label>
-        <input type="text" />
+        <label class="color-black">ИМЯ</label>
+        <input name="name" type="text" />
 
         <label class="color-black">EMAIL</label>
-        <input type="email" />
+        <input name="email" type="email" />
 
-        <label class="color-black">YOUR MESSEGE</label>
-        <textarea type="text"></textarea>
-
-        <button class="submit-btn">SEND</button>
+        <label class="color-black">ВАШЕ СООБЩЕНИЕ</label>
+        <textarea name="text" type="text"></textarea>
+        <p id="message-contact"></p>
+        <button id="contact-btn" class="submit-btn">ОТПРАВИТЬ</button>
       </form>
     </div>
-</div>
+</div><!--modal__contact-us-->
 
 
 
     <div class="modal__donate-to-volunteers modal-unactive">
     <div class="modal__donate-to-volunteers-header">
-        <h2 class="color-black">Donate to volunteers</h2>
+        <h2 class="color-black">Пожертвовать волонтерам</h2>
     </div>
     <div class="modal__content">
         <p class="color-black">
-            Support your favourite animals. It is as simple as buying a cup of coffee.
+            Поддержите своих любимых животных. Это как просто купить чашку кофе.
         </p>
          <form class="donate-form">
         
-        <label>CHOOSE AN ANIMAL</label>
+        <label>ВЫБЕРИТЕ ЖИВОТНОЕ</label>
       <input type="text">
 
-      <label>PAYMENTS</label>
+      <label>ПЛАТЕЖИ</label>
       <div class="payment-type">
-        <button type="button" class="active">Monthly</button>
-        <button type="button">One-time</button>
+        <button type="button" class="active">Ежемесячно</button>
+        <button type="button">Один раз</button>
       </div>
 
       <div class="amounts">
@@ -411,7 +411,7 @@
         <button type="button" class="amount">$25</button>
       </div>
 
-        <label class="color-black">NAME</label>
+        <label class="color-black">ИМЯ</label>
         <input type="text" />
 
         <label class="color-black">EMAIL</label>
@@ -447,7 +447,7 @@
         </div>
       </div>
 
-        <button class="submit-btn">SEND</button>
+        <button class="submit-btn">ОТПРАВИТЬ</button>
 
          <div class="secure">
             <svg class="lock--icon">
@@ -784,29 +784,29 @@
 
     <div class="animals__information--block">
       <div class="animals--information animals--block color-black">
-        <h2>Information</h2>
+        <h2>Информация</h2>
         <div>
-          <p>Zoo</p>
+          <p>Зоопарк</p>
           <a target="_blank" href="https://en.wikipedia.org/wiki/Eastern_gorilla">GRACE gorillas</a>
         </div>
         <div>
-          <p>Type of aviary</p>
+          <p>Тип вольера</p>
           <p>Imitation of the natural environment</p>
         </div>
         <div>
-          <p>Habitat</p>
+          <p>Среда обитания</p>
           <a target="_blank" href="https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo%E2%80%93Rwanda_conflict_(2022%E2%80%93present)">Eastern Democratic Republic of the Congo, southwestern Uganda and Rwanda</a>
         </div>
         <div>
-          <p>Type of food</p>
+          <p>Тип пищи</p>
           <p>Bamboo shoots and fruits, termites and ants.</p>
         </div>
         <div>
-          <p>Population in the world</p>
+          <p>Население в мире</p>
           <p>600</p>
         </div>
         <div>
-          <p>About species</p>
+          <p>Об этом виде</p>
           <p>The eastern gorilla has become increasingly endangered since the 1990s, and the species was listed as critically endangered in September 2016 as its population continued to decrease.</p>
         </div>
       </div>
@@ -836,7 +836,7 @@
             <img class="panda__bamboo bamboo-panda not-exist-bamboo" src="./images/content/Bamboo.png" alt="bamboo">
             <img class="panda__big-tree not-exist-tree-two" src="./images/content/tree1.png" alt="tree">
         </div>
-        <a class="color-black payanddonate zoo-donate donate-to-valunteers" href="#">Donate to volunteers</a>
+        <a class="color-black payanddonate zoo-donate donate-to-valunteers" href="#">Пожертвовать волонтерам</a>
     </section>
 
 
@@ -861,12 +861,27 @@
         </div>
     </footer>
 
-      <script src="./js/animals.js"></script>
+    <div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-content">
+    <p>
+      Мы используем cookies для улучшения работы сайта. Вы можете принять или настроить их.
+    </p>
+    <div class="cookie-buttons">
+      <button id="accept-cookies" class="btn accept">Принять</button>
+      <button id="decline-cookies" class="btn decline">Отклонить</button>
+    </div>
+  </div>
+</div>
+
+    <script src="./js/animals.js"></script>
     <script src="./js/backhome.js"></script>
     <script src="./js/burger.js"></script>
     <script src="./js/map.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/cooke.js"></script>
 </body>
 </html>
 
