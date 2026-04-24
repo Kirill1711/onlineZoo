@@ -90,7 +90,6 @@ closemodal(modalleavefeedback);
 const openmodaldonatetovalunteeers = document.querySelectorAll('.donate-to-valunteers');
 const modaldonatetovalunteers = document.querySelector('.modal__donate-to-volunteers');
 
-const openmodalchoseanimals = document.querySelector('')
 
 openmodal(openmodaldonatetovalunteeers, modaldonatetovalunteers);
 closemodal(modaldonatetovalunteers);
