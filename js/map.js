@@ -1,6 +1,11 @@
+function initMap () {
 const map = document.getElementById('map');
 const zoomInBtn = document.querySelector('.zoomIn');
 const zoomOutBtn = document.querySelector('.zoomOut');
+
+if(!zoomInBtn || !zoomOutBtn) {
+    return;
+}
 
 let scale = 1;
 const minScale = 0.8;
@@ -19,3 +24,6 @@ zoomInBtn.addEventListener('click', () => {
 zoomOutBtn.addEventListener('click', () => {
     updateScale(scale - step);
 });
+}
+
+initMap();
