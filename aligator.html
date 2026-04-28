@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -224,6 +224,12 @@
             </defs>
         </symbol>
 
+        <symbol id="icon-man" width="56px" height="56px" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28" cy="28" r="28" fill="#B9D5D9"/>
+            <path d="M28 18C25.2475 18 23 20.2475 23 23C23 25.7525 25.2475 28 28 28C30.7525 28 33 25.7525 33 23C33 20.2475 30.7525 18 28 18ZM28 19.5C29.9419 19.5 31.5 21.0581 31.5 23C31.5 24.9419 29.9419 26.5 28 26.5C26.0581 26.5 24.5 24.9419 24.5 23C24.5 21.0581 26.0581 19.5 28 19.5ZM21.9893 30C20.8994 30 20 30.8994 20 31.9893V32.75C20 34.5521 21.1396 35.9461 22.6533 36.7812C24.167 37.6164 26.0841 38 28 38C29.9159 38 31.833 37.6164 33.3467 36.7812C34.6373 36.0692 35.6087 34.9313 35.8809 33.5H36.001V31.9893C36.001 30.8994 35.1006 30 34.0107 30H21.9893ZM21.9893 31.5H34.0107C34.2898 31.5 34.501 31.7102 34.501 31.9893V32H34.5V32.75C34.5 33.9479 33.8271 34.8039 32.6221 35.4688C31.417 36.1336 29.7091 36.5 28 36.5C26.2909 36.5 24.583 36.1336 23.3779 35.4688C22.1729 34.8039 21.5 33.9479 21.5 32.75V31.9893C21.5 31.7102 21.7102 31.5 21.9893 31.5Z" fill="white"/>
+            <path d="M28 18C25.2475 18 23 20.2475 23 23C23 25.7525 25.2475 28 28 28C30.7525 28 33 25.7525 33 23C33 20.2475 30.7525 18 28 18ZM21.9893 30C20.8994 30 20 30.8994 20 31.9893V32.75C20 34.5521 21.1396 35.9461 22.6533 36.7812C24.167 37.6164 26.0841 38 28 38C29.9159 38 31.833 37.6164 33.3467 36.7812C34.6373 36.0692 35.6087 34.9313 35.8809 33.5H36.001V31.9893C36.001 30.8994 35.1006 30 34.0107 30H21.9893Z" fill="white"/>
+        </symbol>
+
 </svg>
 
     <header>
@@ -236,18 +242,23 @@
                     <a class="color-white" href="./index.html">Главная</a>
                     <a class="color-white" href="./map.html">Карта</a>
                     <a class="color-white" href="./panda.html">Зоопарки</a>
-                    <a class="color-white contact-us" href="#">Контакты</a>
-                    <a class="color-white" href="#">Дезайн</a>
+                    <a class="color-white contact-us" href="#">Свяжитесь с нами</a>
                 </nav>
 
-                <div class="auth-form">
-                    <a class="color-white log-in" href="#">Войти</a>
-                    <a class="color-white sign-up" href="#">ЗАрегистрироватся</a>
+                <div id="auth-form" class="auth-form">
+                    <a class="color-white log-in" href="#">Вход</a>
+                    <a class="color-white sign-up" href="#">Регистрация</a>
                 </div>
                 <div id="dashboard" style="display:none;">
-                    <p>Добро пожаловать, <span id="userName"></span>!</p>
+                    <div class="dashboard__container">
+                    <svg class="icon--man">
+                        <use href="#icon-man"></use>
+                    </svg>
+                    <p id="userName"></p>
                     <button id="logout">Выйти</button>
+                    </div>
                 </div>
+                
                 <div class="burgermenu-icons">
                     <div class="open-burger active-burger">
                         <span></span>
@@ -266,11 +277,10 @@
         <div class="container">
               <div class="burger-menu-block unactive-block">
                     <a class="color-white" href="./index.html"><b>Главная</b></a>
-                    <a class="color-white" href="./map.html"><b>Кара</b></a>
+                    <a class="color-white" href="./map.html"><b>Карта</b></a>
                     <a class="color-white" href="./panda.html"><b>Зоопарки</b></a>
-                    <a class="color-white contact-us" href="#"><b>Контакты</b></a>
-                    <a class="color-white" href="#"><b>Дезайн</b></a>
-                    <a class="color-white log-in" href="#"><b>Аккаунт</b></a>
+                    <a class="color-white contact-us" href="#"><b>Свяжитесь с нами</b></a>
+                    <a id="log-in" class="color-white log-in" href="#"><b>Аккаунт</b></a>
                 </div>
 
         </div><!--container-->
@@ -464,6 +474,26 @@
     </div>
 </div>
 
+    <div class="modal__leave-feedback modal-unactive">
+    <div class="modal__leave-feedback-header">
+        <h2 class="color-black">Оставить отзыв</h2>
+    </div>
+    <div class="modal__content">
+         <form class="feedback-form">
+        <label class="color-black">ИМЯ</label>
+        <input type="text" />
+
+        <label class="color-black">EMAIL</label>
+        <input type="email" />
+
+        <label class="color-black">ВАШЕ СООБЩЕНИЕ</label>
+        <textarea rows="5" type="text"></textarea>
+
+        <button class="submit-btn">ОТПРАВИТЬ</button>
+      </form>
+    </div>
+</div>
+
 
 <section class="animals">
   <div class="container"> 
@@ -495,7 +525,7 @@
                         </defs>
                         <image clip-path="url(#pets-img)" href="./images/map/aligator-small.jpg" width="76" height="73" />
           </svg>
-          <p>Aligators</p>
+          <p>Аллигаторы</p>
         </div>
 
          <a href="./eagle.html">
@@ -524,7 +554,7 @@
                         </defs>
                         <image clip-path="url(#pets-img)" href="./images/map/eagle-small.jpg" width="76" height="73" />
           </svg>
-          <p>Eagles</p>
+          <p>Орлы</p>
         </div>
         </a>
 
@@ -555,7 +585,7 @@
                         </defs>
                         <image clip-path="url(#pets-img)" href="./images/map/panda-small.jpg" width="76" height="73" />
           </svg>
-          <p>Pandas</p>
+          <p>Панды</p>
         </div>
         </a>
 
@@ -585,7 +615,7 @@
                         </defs>
                         <image clip-path="url(#pets-img)" href="./images/map/elephantes-small.jpg" width="76" height="73" />
           </svg>
-          <p>Elephantes</p>
+          <p>Слоны</p>
         </div>
         </a>
 
@@ -615,7 +645,7 @@
                         </defs>
                         <image clip-path="url(#pets-img)" href="./images/map/penguine-small.jpg" width="76" height="73" />
           </svg>
-          <p>Penguines</p>
+          <p>Пенгвины</p>
         </div>
         </a>
 
@@ -645,7 +675,7 @@
                         </defs>
                         <image clip-path="url(#pets-img)" href="./images/map/gorila-small.jpg" width="76" height="73" />
           </svg>
-          <p>Gorillas</p>
+          <p>Горрилы</p>
         </div>
         </a>
 
@@ -664,7 +694,7 @@
                     <path d="M66.5743 14.6278C72.9044 23.1671 74.6627 34.8064 71.3805 43.7552C68.0982 52.704 59.8925 59.0208 50.4559 63.9338C41.078 68.8469 30.4692 72.4147 21.4429 69.3148C12.4166 66.2734 4.91425 56.6812 1.69058 45.3344C-1.47448 33.9876 -0.360846 20.8861 6.43817 12.2882C13.2958 3.63189 25.7802 -0.579307 37.5612 0.0640697C49.2837 0.707446 60.2441 6.1469 66.5743 14.6278Z" fill="#B9D5D9" fill-opacity="0.2"/>
                     <image clip-path="url(#pets-img-mobile-1)" href="./images/map/aligator-small.jpg" width="73" height="70" />
                     </svg> 
-                  <p class="hero-text">Aligators</p>
+                  <p class="hero-text">Аллигаторы</p>
                     <svg class="icon" width="22" height="22" viewBox="0 0 22 22">
                     <path d="M4 14 L11 7 L18 14 Z" fill="none" stroke="white" stroke-width="2"/>
                     </svg>
@@ -682,7 +712,7 @@
                     <path d="M66.5743 14.6278C72.9044 23.1671 74.6627 34.8064 71.3805 43.7552C68.0982 52.704 59.8925 59.0208 50.4559 63.9338C41.078 68.8469 30.4692 72.4147 21.4429 69.3148C12.4166 66.2734 4.91425 56.6812 1.69058 45.3344C-1.47448 33.9876 -0.360846 20.8861 6.43817 12.2882C13.2958 3.63189 25.7802 -0.579307 37.5612 0.0640697C49.2837 0.707446 60.2441 6.1469 66.5743 14.6278Z" fill="#B9D5D9" fill-opacity="0.2"/>
                     <image clip-path="url(#pets-img-mobile-2)" href="./images/map/panda-small.jpg" width="73" height="70" />
                     </svg> 
-                  <p class="hero-text">Pandas</p>
+                  <p class="hero-text">Панды</p>
           </div>
         </a>
 
@@ -697,7 +727,7 @@
                     <path d="M66.5743 14.6278C72.9044 23.1671 74.6627 34.8064 71.3805 43.7552C68.0982 52.704 59.8925 59.0208 50.4559 63.9338C41.078 68.8469 30.4692 72.4147 21.4429 69.3148C12.4166 66.2734 4.91425 56.6812 1.69058 45.3344C-1.47448 33.9876 -0.360846 20.8861 6.43817 12.2882C13.2958 3.63189 25.7802 -0.579307 37.5612 0.0640697C49.2837 0.707446 60.2441 6.1469 66.5743 14.6278Z" fill="#B9D5D9" fill-opacity="0.2"/>
                     <image clip-path="url(#pets-img-mobile-3)" href="./images/map/gorila-small.jpg" width="73" height="70" />
                     </svg> 
-                  <p class="hero-text">Gorillas</p>
+                  <p class="hero-text">Гориллы</p>
           </div>
         </a>
 
@@ -712,7 +742,7 @@
                     <path d="M66.5743 14.6278C72.9044 23.1671 74.6627 34.8064 71.3805 43.7552C68.0982 52.704 59.8925 59.0208 50.4559 63.9338C41.078 68.8469 30.4692 72.4147 21.4429 69.3148C12.4166 66.2734 4.91425 56.6812 1.69058 45.3344C-1.47448 33.9876 -0.360846 20.8861 6.43817 12.2882C13.2958 3.63189 25.7802 -0.579307 37.5612 0.0640697C49.2837 0.707446 60.2441 6.1469 66.5743 14.6278Z" fill="#B9D5D9" fill-opacity="0.2"/>
                     <image clip-path="url(#pets-img-mobile-4)" href="./images/map/eagle-small.jpg" width="73" height="70" />
                     </svg> 
-                  <p class="hero-text">Eagles</p>
+                  <p class="hero-text">Орлы</p>
           </div>
         </a>
 
@@ -727,7 +757,7 @@
                     <path d="M66.5743 14.6278C72.9044 23.1671 74.6627 34.8064 71.3805 43.7552C68.0982 52.704 59.8925 59.0208 50.4559 63.9338C41.078 68.8469 30.4692 72.4147 21.4429 69.3148C12.4166 66.2734 4.91425 56.6812 1.69058 45.3344C-1.47448 33.9876 -0.360846 20.8861 6.43817 12.2882C13.2958 3.63189 25.7802 -0.579307 37.5612 0.0640697C49.2837 0.707446 60.2441 6.1469 66.5743 14.6278Z" fill="#B9D5D9" fill-opacity="0.2"/>
                     <image clip-path="url(#pets-img-mobile-5)" href="./images/map/penguine-small.jpg" width="73" height="70" />
                     </svg> 
-                  <p class="hero-text">Penguins</p>
+                  <p class="hero-text">Пенгвины</p>
           </div>
         </a>
 
@@ -742,7 +772,7 @@
                     <path d="M66.5743 14.6278C72.9044 23.1671 74.6627 34.8064 71.3805 43.7552C68.0982 52.704 59.8925 59.0208 50.4559 63.9338C41.078 68.8469 30.4692 72.4147 21.4429 69.3148C12.4166 66.2734 4.91425 56.6812 1.69058 45.3344C-1.47448 33.9876 -0.360846 20.8861 6.43817 12.2882C13.2958 3.63189 25.7802 -0.579307 37.5612 0.0640697C49.2837 0.707446 60.2441 6.1469 66.5743 14.6278Z" fill="#B9D5D9" fill-opacity="0.2"/>
                     <image clip-path="url(#pets-img-mobile-6)" href="./images/map/elephantes-small.jpg" width="73" height="70" />
                     </svg> 
-                  <p class="hero-text">Elephants</p>
+                  <p class="hero-text">Слоны</p>
           </div>
         </a>
 
@@ -750,8 +780,8 @@
     
 
       <div class="animals__container">
-        <h2 class="color-black">Alligator Swamp and Spoonbills</h2>
-        <p>St. Augustine, Florida, USA</p>
+        <h2 class="color-black">Аллигаторное болото</h2>
+        <p>Сент-Огастин, Флорида, США</p>
         
         <div class="animals__video">
           <iframe
@@ -773,38 +803,44 @@
         <h2>Информация</h2>
         <div>
           <p>Зоопарк</p>
-          <a target="_blank" href="https://en.wikipedia.org/wiki/St._Augustine_Alligator_Farm_Zoological_Park">St. Augustine's Alligator Farm Zoological Park</a>
+          <a target="_blank" href="https://en.wikipedia.org/wiki/St._Augustine_Alligator_Farm_Zoological_Park">Зоопарк «Аллигаторная ферма Сент-Огастина»</a>
         </div>
         <div>
           <p>Тип вольера</p>
-          <p>Imitation of the natural environment</p>
+          <p>Имитация природной среды</p>
         </div>
         <div>
           <p>Среда обитания</p>
-          <p> Southeastern United States and northeastern Mexico</p>
+          <p> Юго-восток Соединенных Штатов и северо-восток Мексики</p>
         </div>
         <div>
           <p>Тип пищи</p>
-          <p>Fish, amphibians, reptiles, birds, and mammals</p>
+          <p>Рыбы, земноводные, рептилии, птицы и млекопитающие</p>
         </div>
         <div>
-          <p>Население в мире</p>
+          <p>Всего в мире</p>
           <p>600</p>
         </div>
         <div>
           <p>Об этом виде</p>
-          <p>The yards at Shenshuping Gengda Panda Center in China's Wolong Valley are filled with bamboo--making for some very happy panda residents.</p>
+          <p>Семейство пресмыкающихся (Alligatoridae), отличающееся широкой U-образной мордой, обитающее в пресных водоемах США и Китая. </p>
         </div>
       </div>
       <div class="animals--facts animals--block color-black">
-        <h2>Interesting Facts</h2>
+        <h2>Интересные Факты</h2>
         <div>
-          <p class="facts--text">It is one of two extant species in the genus Alligator within the family Alligatoridae; it is larger than the only other living alligator species, the Chinese alligator.</p>
-          <p class="facts--text">Adult male American alligators measure 3.4 to 4.6 m in length, and can weigh up to 453 kg . Females are smaller, measuring 2.6 to 3 m in length.</p>
-          <p class="facts--text">Young are born with yellow bands around their bodies and are protected by their mother for up to one year.</p>
-          <p class="facts--text">American alligator was listed as an endangered species by the Endangered Species Act of 1973.</p>
-          <p class="facts--text">The teeth number 74–80.</p>
-          <p class="facts--text">The American alligator was first classified by French zoologist François Marie Daudin as Crocodilus mississipiensis in 1801.</p>
+          <p class="facts--text">Американские аллигаторы обычно достигают в длину от 3 до 4,5 метров и могут весить до 450 килограммов!</p>
+          <p class="facts--text">Аллигаторы обитают на юге Соединенных Штатов, от Северной Каролины до Техаса.</p>
+          <p class="facts--text">Поскольку аллигаторы не могут регулировать температуру тела изнутри, они греются на солнце, когда им холодно, и плавают, когда им жарко.</p>
+          <p class="facts--text">Аллигаторы питаются в основном рыбой, черепахами, змеями, птицами и мелкими млекопитающими, хотя, когда голодны, могут нападать и на более крупную добычу, такую ​​как олени или крупный рогатый скот.</p>
+          <p class="facts--text">Детеныши аллигаторов питаются в основном насекомыми и их личинками, червями, пауками и улитками</p>
+          <p class="facts--text">Самки аллигаторов откладывают от 20 до 70 яиц.</p>
+          <p class="facts--text">Молодые аллигаторы остаются со своими матерями в течение первых двух лет жизни.</p>
+          <p class="facts--text">В дикой природе аллигаторы могут жить до 50 лет.</p>
+          <p class="facts--text">Аллигаторы и крокодилы — близкородственные и очень похожие животные, но аллигаторы, как правило, обитают в пресной воде, тогда как крокодилы встречаются в соленой или солоноватой воде. У аллигаторов также более широкая, U-образная морда и неправильный прикус.</p>
+          <p class="facts--text">Аллигаторы сжимают челюсти с усилием в тысячи фунтов на квадратный дюйм.</p>
+          <p class="facts--text">Аллигаторы могут бегать по суше со скоростью до 11 миль в час, но не очень долго.</p>
+          <p class="facts--text">Аллигаторы — очень сильные и быстрые пловцы, способные развивать скорость до 20 миль в час!</p>
         </div>
       </div>
     </div>
@@ -823,28 +859,28 @@
         <a class="color-black payanddonate zoo-donate donate-to-valunteers" href="#">Пожертвовать волонтерам</a>
 </section>
 
-    <footer>
+<footer>
         <div class="container">
         <div class="footer__nav">
             <div class="nav-buttom">
                 <svg class="logo--large">
                     <use href="#logo"></use>
                 </svg>
-                <a class="color-white" href="./index.html">About</a>
-                <a class="color-white" href="./map.html">Map</a>
-                <a class="color-white" href="./panda.html">Zoos</a>
-                <a class="color-white contact-us" href="#">Contact us</a>
-                <a class="color-white" href="#">design</a>
+                <a class="color-white" href="./index.html">Главная
+                <a class="color-white" href="./map.html">Карта
+                <a class="color-white" href="./panda.html">Зоопарк
+                <a class="color-white contact-us" href="#">Контакты
             </div>
             <div class="footer__author">
                 <p>Design by Lemeshko Kateryna</p>
                 <p>Front/Back Kirill Kovalev</p>
+                <p>&#169; OnlineZoo 2026</p>
             </div>
         </div>
         </div>
-    </footer>
+</footer>
 
-    <div id="cookie-banner" class="cookie-banner">
+<div id="cookie-banner" class="cookie-banner">
   <div class="cookie-content">
     <p>
       Мы используем cookies для улучшения работы сайта. Вы можете принять или настроить их.

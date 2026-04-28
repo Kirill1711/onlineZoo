@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,9 @@
 
     <link rel="shortcut icon" href="./images/content/panda-icon.png" type="image/x-icon">
 
-    <title>Whatch Eagles online</title>
+     <meta name="description" content="Смотреть Орлов онлайн.">
+
+    <title>Смотреть Орлов Онлайн</title>
 </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
@@ -223,6 +225,12 @@
             </defs>
         </symbol>
 
+        <symbol id="icon-man" width="56px" height="56px" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28" cy="28" r="28" fill="#B9D5D9"/>
+            <path d="M28 18C25.2475 18 23 20.2475 23 23C23 25.7525 25.2475 28 28 28C30.7525 28 33 25.7525 33 23C33 20.2475 30.7525 18 28 18ZM28 19.5C29.9419 19.5 31.5 21.0581 31.5 23C31.5 24.9419 29.9419 26.5 28 26.5C26.0581 26.5 24.5 24.9419 24.5 23C24.5 21.0581 26.0581 19.5 28 19.5ZM21.9893 30C20.8994 30 20 30.8994 20 31.9893V32.75C20 34.5521 21.1396 35.9461 22.6533 36.7812C24.167 37.6164 26.0841 38 28 38C29.9159 38 31.833 37.6164 33.3467 36.7812C34.6373 36.0692 35.6087 34.9313 35.8809 33.5H36.001V31.9893C36.001 30.8994 35.1006 30 34.0107 30H21.9893ZM21.9893 31.5H34.0107C34.2898 31.5 34.501 31.7102 34.501 31.9893V32H34.5V32.75C34.5 33.9479 33.8271 34.8039 32.6221 35.4688C31.417 36.1336 29.7091 36.5 28 36.5C26.2909 36.5 24.583 36.1336 23.3779 35.4688C22.1729 34.8039 21.5 33.9479 21.5 32.75V31.9893C21.5 31.7102 21.7102 31.5 21.9893 31.5Z" fill="white"/>
+            <path d="M28 18C25.2475 18 23 20.2475 23 23C23 25.7525 25.2475 28 28 28C30.7525 28 33 25.7525 33 23C33 20.2475 30.7525 18 28 18ZM21.9893 30C20.8994 30 20 30.8994 20 31.9893V32.75C20 34.5521 21.1396 35.9461 22.6533 36.7812C24.167 37.6164 26.0841 38 28 38C29.9159 38 31.833 37.6164 33.3467 36.7812C34.6373 36.0692 35.6087 34.9313 35.8809 33.5H36.001V31.9893C36.001 30.8994 35.1006 30 34.0107 30H21.9893Z" fill="white"/>
+        </symbol>
+
 </svg>
 
     <header>
@@ -232,21 +240,26 @@
                     <svg class="logo--large">
                         <use href="#logo"></use>
                     </svg>
-                    <a class="color-white" href="./index.html">About</a>
-                    <a class="color-white" href="./map.html">Map</a>
-                    <a class="color-white" href="./panda.html">Zoos</a>
-                    <a class="color-white contact-us" href="#">Contact us</a>
-                    <a class="color-white" href="#">Design</a>
+                    <a class="color-white" href="./index.html">Главная</a>
+                    <a class="color-white" href="./map.html">Карта</a>
+                    <a class="color-white" href="./panda.html">Зоопарки</a>
+                    <a class="color-white contact-us" href="#">Свяжитесь с нами</a>
                 </nav>
 
-                <div class="auth-form">
+                <div id="auth-form" class="auth-form">
                     <a class="color-white log-in" href="#">Вход</a>
-                    <a class="color-white sign-up" href="#">Sign up</a>
+                    <a class="color-white sign-up" href="#">Регистрация</a>
                 </div>
                 <div id="dashboard" style="display:none;">
-                    <p>Добро пожаловать, <span id="userName"></span>!</p>
+                    <div class="dashboard__container">
+                    <svg class="icon--man">
+                        <use href="#icon-man"></use>
+                    </svg>
+                    <p id="userName"></p>
                     <button id="logout">Выйти</button>
+                    </div>
                 </div>
+                
                 <div class="burgermenu-icons">
                     <div class="open-burger active-burger">
                         <span></span>
@@ -264,12 +277,11 @@
         <span class="blur-effect"></span>
         <div class="container">
               <div class="burger-menu-block unactive-block">
-                    <a class="color-white" href="./index.html"><b>About</b></a>
-                    <a class="color-white" href="./map.html"><b>Map</b></a>
-                    <a class="color-white" href="./panda.html"><b>Zoos</b></a>
-                    <a class="color-white contact-us" href="#"><b>Contact us</b></a>
-                    <a class="color-white" href="#"><b>Design</b></a>
-                    <a class="color-white log-in" href="#"><b>My account</b></a>
+                    <a class="color-white" href="./index.html"><b>Главная</b></a>
+                    <a class="color-white" href="./map.html"><b>Карта</b></a>
+                    <a class="color-white" href="./panda.html"><b>Зоопарки</b></a>
+                    <a class="color-white contact-us" href="#"><b>Свяжитесь с нами</b></a>
+                    <a id="log-in" class="color-white log-in" href="#"><b>Аккаунт</b></a>
                 </div>
 
         </div><!--container-->
@@ -389,7 +401,6 @@
 
 
 
-
     <div class="modal__donate-to-volunteers modal-unactive">
     <div class="modal__donate-to-volunteers-header">
         <h2 class="color-black">Пожертвовать волонтерам</h2>
@@ -464,6 +475,26 @@
     </div>
 </div>
 
+    <div class="modal__leave-feedback modal-unactive">
+    <div class="modal__leave-feedback-header">
+        <h2 class="color-black">Оставить отзыв</h2>
+    </div>
+    <div class="modal__content">
+         <form class="feedback-form">
+        <label class="color-black">ИМЯ</label>
+        <input type="text" />
+
+        <label class="color-black">EMAIL</label>
+        <input type="email" />
+
+        <label class="color-black">ВАШЕ СООБЩЕНИЕ</label>
+        <textarea rows="5" type="text"></textarea>
+
+        <button class="submit-btn">ОТПРАВИТЬ</button>
+      </form>
+    </div>
+</div>
+
 
 <section class="animals">
   <div class="container"> 
@@ -495,7 +526,7 @@
                         </defs>
                         <image clip-path="url(#pets-img)" href="./images/map/eagle-small.jpg" width="76" height="73" />
           </svg>
-          <p>Eagles</p>
+          <p>Орлы</p>
         </div>
 
          <a href="./aligator.html">
@@ -524,7 +555,7 @@
                         </defs>
                         <image clip-path="url(#pets-img)" href="./images/map/aligator-small.jpg" width="76" height="73" />
           </svg>
-          <p>Aligators</p>
+          <p>Аллигаторы</p>
         </div>
         </a>
 
@@ -555,7 +586,7 @@
                         </defs>
                         <image clip-path="url(#pets-img)" href="./images/map/panda-small.jpg" width="76" height="73" />
           </svg>
-          <p>Pandas</p>
+          <p>Панды</p>
         </div>
         </a>
 
@@ -585,7 +616,7 @@
                         </defs>
                         <image clip-path="url(#pets-img)" href="./images/map/elephantes-small.jpg" width="76" height="73" />
           </svg>
-          <p>Elephantes</p>
+          <p>Слоны</p>
         </div>
         </a>
 
@@ -615,7 +646,7 @@
                         </defs>
                         <image clip-path="url(#pets-img)" href="./images/map/penguine-small.jpg" width="76" height="73" />
           </svg>
-          <p>Penguines</p>
+          <p>Пенгвины</p>
         </div>
         </a>
 
@@ -645,7 +676,7 @@
                         </defs>
                         <image clip-path="url(#pets-img)" href="./images/map/gorila-small.jpg" width="76" height="73" />
           </svg>
-          <p>Gorillas</p>
+          <p>Гориллы</p>
         </div>
         </a>
 
@@ -664,7 +695,7 @@
                     <path d="M66.5743 14.6278C72.9044 23.1671 74.6627 34.8064 71.3805 43.7552C68.0982 52.704 59.8925 59.0208 50.4559 63.9338C41.078 68.8469 30.4692 72.4147 21.4429 69.3148C12.4166 66.2734 4.91425 56.6812 1.69058 45.3344C-1.47448 33.9876 -0.360846 20.8861 6.43817 12.2882C13.2958 3.63189 25.7802 -0.579307 37.5612 0.0640697C49.2837 0.707446 60.2441 6.1469 66.5743 14.6278Z" fill="#B9D5D9" fill-opacity="0.2"/>
                     <image clip-path="url(#pets-img-mobile-1)" href="./images/map/eagle-small.jpg" width="73" height="70" />
                     </svg> 
-                  <p class="hero-text">Eagles</p>
+                  <p class="hero-text">Орлы</p>
                     <svg class="icon" width="22" height="22" viewBox="0 0 22 22">
                     <path d="M4 14 L11 7 L18 14 Z" fill="none" stroke="white" stroke-width="2"/>
                     </svg>
@@ -682,7 +713,7 @@
                     <path d="M66.5743 14.6278C72.9044 23.1671 74.6627 34.8064 71.3805 43.7552C68.0982 52.704 59.8925 59.0208 50.4559 63.9338C41.078 68.8469 30.4692 72.4147 21.4429 69.3148C12.4166 66.2734 4.91425 56.6812 1.69058 45.3344C-1.47448 33.9876 -0.360846 20.8861 6.43817 12.2882C13.2958 3.63189 25.7802 -0.579307 37.5612 0.0640697C49.2837 0.707446 60.2441 6.1469 66.5743 14.6278Z" fill="#B9D5D9" fill-opacity="0.2"/>
                     <image clip-path="url(#pets-img-mobile-2)" href="./images/map/panda-small.jpg" width="73" height="70" />
                     </svg> 
-                  <p class="hero-text">Pandas</p>
+                  <p class="hero-text">Панды</p>
           </div>
         </a>
 
@@ -697,7 +728,7 @@
                     <path d="M66.5743 14.6278C72.9044 23.1671 74.6627 34.8064 71.3805 43.7552C68.0982 52.704 59.8925 59.0208 50.4559 63.9338C41.078 68.8469 30.4692 72.4147 21.4429 69.3148C12.4166 66.2734 4.91425 56.6812 1.69058 45.3344C-1.47448 33.9876 -0.360846 20.8861 6.43817 12.2882C13.2958 3.63189 25.7802 -0.579307 37.5612 0.0640697C49.2837 0.707446 60.2441 6.1469 66.5743 14.6278Z" fill="#B9D5D9" fill-opacity="0.2"/>
                     <image clip-path="url(#pets-img-mobile-3)" href="./images/map/gorila-small.jpg" width="73" height="70" />
                     </svg> 
-                  <p class="hero-text">Gorillas</p>
+                  <p class="hero-text">Гориллы</p>
           </div>
         </a>
 
@@ -712,7 +743,7 @@
                     <path d="M66.5743 14.6278C72.9044 23.1671 74.6627 34.8064 71.3805 43.7552C68.0982 52.704 59.8925 59.0208 50.4559 63.9338C41.078 68.8469 30.4692 72.4147 21.4429 69.3148C12.4166 66.2734 4.91425 56.6812 1.69058 45.3344C-1.47448 33.9876 -0.360846 20.8861 6.43817 12.2882C13.2958 3.63189 25.7802 -0.579307 37.5612 0.0640697C49.2837 0.707446 60.2441 6.1469 66.5743 14.6278Z" fill="#B9D5D9" fill-opacity="0.2"/>
                     <image clip-path="url(#pets-img-mobile-4)" href="./images/map/aligator-small.jpg" width="73" height="70" />
                     </svg> 
-                  <p class="hero-text">Alligators</p>
+                  <p class="hero-text">Аллигаторы</p>
           </div>
         </a>
 
@@ -727,7 +758,7 @@
                     <path d="M66.5743 14.6278C72.9044 23.1671 74.6627 34.8064 71.3805 43.7552C68.0982 52.704 59.8925 59.0208 50.4559 63.9338C41.078 68.8469 30.4692 72.4147 21.4429 69.3148C12.4166 66.2734 4.91425 56.6812 1.69058 45.3344C-1.47448 33.9876 -0.360846 20.8861 6.43817 12.2882C13.2958 3.63189 25.7802 -0.579307 37.5612 0.0640697C49.2837 0.707446 60.2441 6.1469 66.5743 14.6278Z" fill="#B9D5D9" fill-opacity="0.2"/>
                     <image clip-path="url(#pets-img-mobile-5)" href="./images/map/penguine-small.jpg" width="73" height="70" />
                     </svg> 
-                  <p class="hero-text">Penguins</p>
+                  <p class="hero-text">Пенгвины</p>
           </div>
         </a>
 
@@ -742,7 +773,7 @@
                     <path d="M66.5743 14.6278C72.9044 23.1671 74.6627 34.8064 71.3805 43.7552C68.0982 52.704 59.8925 59.0208 50.4559 63.9338C41.078 68.8469 30.4692 72.4147 21.4429 69.3148C12.4166 66.2734 4.91425 56.6812 1.69058 45.3344C-1.47448 33.9876 -0.360846 20.8861 6.43817 12.2882C13.2958 3.63189 25.7802 -0.579307 37.5612 0.0640697C49.2837 0.707446 60.2441 6.1469 66.5743 14.6278Z" fill="#B9D5D9" fill-opacity="0.2"/>
                     <image clip-path="url(#pets-img-mobile-6)" href="./images/map/elephantes-small.jpg" width="73" height="70" />
                     </svg> 
-                  <p class="hero-text">Elephants</p>
+                  <p class="hero-text">Слоны</p>
           </div>
         </a>
 
@@ -750,8 +781,8 @@
     
 
       <div class="animals__container">
-        <h2 class="color-black">West End Bald Eagle Cam</h2>
-        <p>Catalina Island, California, USA</p>
+        <h2 class="color-black">Камера наблюдения за белоголовыми орлами в западной части </h2>
+        <p>Остров Каталина, Калифорния, США</p>
         
         <div class="animals__video">
           <iframe
@@ -765,9 +796,9 @@
 
         <div class="animals__cam">
           <div class="cam__title">
-                <h2 class="color-black">Other cams</h2>
+                <h2 class="color-black">Другие камеры</h2>
                 <button class="cams__toggle">
-                  <span class="cams__toggle-text">HIDE OTHER CAMS</span>
+                  <span class="cams__toggle-text">СКРЫТь</span>
                   <span class="cams__toggle-arrow arrow-top"></span>
                 </button>
           </div>
@@ -798,38 +829,38 @@
         <h2>Информация</h2>
         <div>
           <p>Зоопарк</p>
-          <p>Catalina Island</p>
+          <p>Остров Каталина</p>
         </div>
         <div>
           <p>Тип вольера</p>
-          <p>Imitation of the natural environment</p>
+          <p>Имитация природной среды</p>
         </div>
         <div>
           <p>Среда обитания</p>
-          <p> The coast of Southern California in the Gulf of Santa Catalina</p>
+          <p> Побережье Южной Калифорнии в заливе Санта-Каталина.</p>
         </div>
         <div>
           <p>Тип пищи</p>
-          <p>Fish</p>
+          <p>Рыба</p>
         </div>
         <div>
-          <p>Население в мире</p>
-          <p>In 2020, seven pairs of Bald Eagles nested on Catalina Island and four chicks fledged.</p>
+          <p>Всего в мире</p>
+          <p>В 2020 году на острове Каталина гнездились семь пар белоголовых орланов, и из гнездящихся птиц вылупились четыре птенца.</p>
         </div>
         <div>
           <p>Об этом виде</p>
-          <p>The bald eagle (Haliaeetus leucocephalus) is a bird of prey found in North America.</p>
+          <p>TБелоголовый орлан (Haliaeetus leucocephalus) — хищная птица, обитающая в Северной Америке.</p>
         </div>
       </div>
       <div class="animals--facts animals--block color-black">
-        <h2>Interesting Facts</h2>
+        <h2>Интересные факты</h2>
         <div>
-          <p class="facts--text">Distinguishing feature of the immature bald eagle over the mature bird is its black, yellow-tipped beak; the mature eagle has a fully yellow beak.</p>
-          <p class="facts--text">The bald eagle has sometimes been considered the largest true raptor (accipitrid) in North America.</p>
-          <p class="facts--text">The bald eagle has a body length of 70–102 cm. Typical wingspan is between 1.8 and 2.3 m  and mass is normally between 3 and 6.3 kg </p>
-          <p class="facts--text">Female pandas give birth to one or two cubs every two years. Cubs stay with their mothers for 18 months before venturing off on their own.</p>
-          <p class="facts--text">BTo hunt fish, the eagle swoops down over the water and snatches the fish out of the water with its talons.</p>
-          <p class="facts--text">The bald eagle is a powerful flier, and soars on thermal convection currents. It reaches speeds of 56–70 km/h (35–43 mph) when gliding and flapping</p>
+          <p class="facts--text">Белоголовые орланы могут жить очень долго: в дикой природе их средняя продолжительность жизни составляет 28 лет, а в неволе — 36 лет.</p>
+          <p class="facts--text">В рамках инновационной программы реинтродукции, проведенной в 2002 и 2006 годах на северных островах Ченнел, был выпущен 61 молодой белоголовый орлан.</p>
+          <p class="facts--text">На островах Ченнел, где крупные деревья встречаются редко, белоголовые орланы строят гнезда на скалах, уступах и в соснах островных и торрейских.</p>
+          <p class="facts--text">Самка белоголового орла откладывает от 1 до 3 яиц, но обычно 2.</p>
+          <p class="facts--text">Инкубационный период у белоголовых орланов составляет около 35 дней, а оперение птенцов происходит примерно через 10-14 недель.</p>
+            <p class="facts--text">Белоголовые орланы могут жить очень долго: в дикой природе их средняя продолжительность жизни составляет 28 лет, а в неволе — 36 лет.</p>
         </div>
       </div>
     </div>
@@ -848,27 +879,28 @@
     </section>
 
 
-    <footer>
+<footer>
         <div class="container">
         <div class="footer__nav">
             <div class="nav-buttom">
                 <svg class="logo--large">
                     <use href="#logo"></use>
                 </svg>
-                <a class="color-white" href="./index.html">About</a>
-                <a class="color-white" href="./map.html">Map</a>
-                <a class="color-white" href="./panda.html">Zoos</a>
-                <a class="color-white contact-us" href="#">Contact us</a>
-                <a class="color-white" href="#">design</a>
+                <a class="color-white" href="./index.html">Главная
+                <a class="color-white" href="./map.html">Карта
+                <a class="color-white" href="./panda.html">Зоопарк
+                <a class="color-white contact-us" href="#">Контакты
             </div>
             <div class="footer__author">
                 <p>Design by Lemeshko Kateryna</p>
                 <p>Front/Back Kirill Kovalev</p>
+                <p>&#169; OnlineZoo 2026</p>
             </div>
         </div>
         </div>
-    </footer>
-    <div id="cookie-banner" class="cookie-banner">
+</footer>
+
+<div id="cookie-banner" class="cookie-banner">
   <div class="cookie-content">
     <p>
       Мы используем cookies для улучшения работы сайта. Вы можете принять или настроить их.

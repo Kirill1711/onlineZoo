@@ -1,6 +1,8 @@
 const authBlock = document.querySelector('.modal__auth');
 const dashboard = document.getElementById('dashboard');
 const authForm = document.querySelector('.auth-form');
+const mobileAuthForm = document.getElementById('log-in');
+console.log(mobileAuthForm);
 
 function showDashboard(user) {
     if(authBlock.classList.contains('modal-active')){
@@ -21,6 +23,7 @@ function showAuthform () {
 
 function closeAuthform () {
     authForm.style.display = 'none';
+    mobileAuthForm.style.display = 'none';
 }
 
 function closeDashboard () {
@@ -32,6 +35,7 @@ function showAuth() {
     authBlock.classList.remove('modal-unactive');
     dashboard.style.display = 'none';
     authForm.style.display = 'flex';
+    mobileAuthForm.style.display = 'block';
 }
 
 let regMsgTimeout;

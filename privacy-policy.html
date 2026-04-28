@@ -32,7 +32,7 @@
 
     <link rel="shortcut icon" href="./images/content/panda-icon.png" type="image/x-icon">
 
-    <title>Privacy Policy</title>
+    <title>Политика конфидентиальности</title>
 </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
@@ -224,6 +224,12 @@
             </defs>
         </symbol>
 
+        <symbol id="icon-man" width="56px" height="56px" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28" cy="28" r="28" fill="#B9D5D9"/>
+            <path d="M28 18C25.2475 18 23 20.2475 23 23C23 25.7525 25.2475 28 28 28C30.7525 28 33 25.7525 33 23C33 20.2475 30.7525 18 28 18ZM28 19.5C29.9419 19.5 31.5 21.0581 31.5 23C31.5 24.9419 29.9419 26.5 28 26.5C26.0581 26.5 24.5 24.9419 24.5 23C24.5 21.0581 26.0581 19.5 28 19.5ZM21.9893 30C20.8994 30 20 30.8994 20 31.9893V32.75C20 34.5521 21.1396 35.9461 22.6533 36.7812C24.167 37.6164 26.0841 38 28 38C29.9159 38 31.833 37.6164 33.3467 36.7812C34.6373 36.0692 35.6087 34.9313 35.8809 33.5H36.001V31.9893C36.001 30.8994 35.1006 30 34.0107 30H21.9893ZM21.9893 31.5H34.0107C34.2898 31.5 34.501 31.7102 34.501 31.9893V32H34.5V32.75C34.5 33.9479 33.8271 34.8039 32.6221 35.4688C31.417 36.1336 29.7091 36.5 28 36.5C26.2909 36.5 24.583 36.1336 23.3779 35.4688C22.1729 34.8039 21.5 33.9479 21.5 32.75V31.9893C21.5 31.7102 21.7102 31.5 21.9893 31.5Z" fill="white"/>
+            <path d="M28 18C25.2475 18 23 20.2475 23 23C23 25.7525 25.2475 28 28 28C30.7525 28 33 25.7525 33 23C33 20.2475 30.7525 18 28 18ZM21.9893 30C20.8994 30 20 30.8994 20 31.9893V32.75C20 34.5521 21.1396 35.9461 22.6533 36.7812C24.167 37.6164 26.0841 38 28 38C29.9159 38 31.833 37.6164 33.3467 36.7812C34.6373 36.0692 35.6087 34.9313 35.8809 33.5H36.001V31.9893C36.001 30.8994 35.1006 30 34.0107 30H21.9893Z" fill="white"/>
+        </symbol>
+
 </svg>
 
     <header>
@@ -233,21 +239,26 @@
                     <svg class="logo--large">
                         <use href="#logo"></use>
                     </svg>
-                    <a class="color-white" href="./index.html">About</a>
-                    <a class="color-white" href="./map.html">Map</a>
-                    <a class="color-white" href="./panda.html">Zoos</a>
-                    <a class="color-white contact-us" href="#">Contact us</a>
-                    <a class="color-white" href="#">Design</a>
+                    <a class="color-white" href="./index.html">Главная</a>
+                    <a class="color-white" href="./map.html">Карта</a>
+                    <a class="color-white" href="./panda.html">Зоопарки</a>
+                    <a class="color-white contact-us" href="#">Свяжитесь с нами</a>
                 </nav>
 
-                <div class="auth-form">
+                <div id="auth-form" class="auth-form">
                     <a class="color-white log-in" href="#">Вход</a>
-                    <a class="color-white sign-up" href="#">Sign up</a>
+                    <a class="color-white sign-up" href="#">Регистрация</a>
                 </div>
                 <div id="dashboard" style="display:none;">
-                    <p>Добро пожаловать, <span id="userName"></span>!</p>
+                    <div class="dashboard__container">
+                    <svg class="icon--man">
+                        <use href="#icon-man"></use>
+                    </svg>
+                    <p id="userName"></p>
                     <button id="logout">Выйти</button>
+                    </div>
                 </div>
+                
                 <div class="burgermenu-icons">
                     <div class="open-burger active-burger">
                         <span></span>
@@ -265,12 +276,11 @@
         <span class="blur-effect"></span>
         <div class="container">
               <div class="burger-menu-block unactive-block">
-                    <a class="color-white" href="./index.html"><b>About</b></a>
-                    <a class="color-white" href="./map.html"><b>Map</b></a>
-                    <a class="color-white" href="./panda.html"><b>Zoos</b></a>
-                    <a class="color-white contact-us" href="#"><b>Contact us</b></a>
-                    <a class="color-white" href="#"><b>Design</b></a>
-                    <a class="color-white log-in" href="#"><b>My account</b></a>
+                    <a class="color-white" href="./index.html"><b>Главная</b></a>
+                    <a class="color-white" href="./map.html"><b>Карта</b></a>
+                    <a class="color-white" href="./panda.html"><b>Зоопарки</b></a>
+                    <a class="color-white contact-us" href="#"><b>Свяжитесь с нами</b></a>
+                    <a id="log-in" class="color-white log-in" href="#"><b>Аккаунт</b></a>
                 </div>
 
         </div><!--container-->
@@ -325,6 +335,7 @@
 
     </div>
 </div><!--modal__create-account-->
+
 
 <div id="authForm" class="modal__auth modal-unactive">
 	<div class="modal__header">
@@ -387,14 +398,34 @@
     </div>
 </div><!--modal__contact-us-->
 
+    <div class="modal__leave-feedback modal-unactive">
+    <div class="modal__leave-feedback-header">
+        <h2 class="color-black">Оставить отзыв</h2>
+    </div>
+    <div class="modal__content">
+         <form class="feedback-form">
+        <label class="color-black">ИМЯ</label>
+        <input type="text" />
+
+        <label class="color-black">EMAIL</label>
+        <input type="email" />
+
+        <label class="color-black">ВАШЕ СООБЩЕНИЕ</label>
+        <textarea rows="5" type="text"></textarea>
+
+        <button class="submit-btn">ОТПРАВИТЬ</button>
+      </form>
+    </div>
+</div>
+
 <section class="privacy-policy">
     <h2 class="color-black">Политика конфиденциальности</h2>
-    <p class="color-black"> Welcome to our Online Zoo. We respect your privacy and are committed to protecting your personal information.</p>
-    <p class="color-black">We may collect basic information such as your name, email address, and browsing activity when you use our website. This information is used to improve your experience, respond to inquiries, and provide updates about our services.</p>
-    <p class="color-black">We use cookies to enhance site functionality and analyze traffic. You can disable cookies in your browser settings if you prefer.</p>
-    <p class="color-black">We do not sell or share your personal information with third parties, except when required by law or to provide essential services (such as website hosting).</p>
-    <p class="color-black">We take reasonable measures to protect your data, but no method of transmission over the internet is completely secure.</p>
-    <p class="color-black">By using our website, you agree to this Privacy Policy. If you have any questions, please contact us.</p>
+    <p class="color-black">Добро пожаловать в наш онлайн-зоопарк. Мы уважаем вашу конфиденциальность и стремимся защитить вашу личную информацию.</p>
+    <p class="color-black">При использовании нашего веб-сайта мы можем собирать основную информацию, такую ​​как ваше имя, адрес электронной почты и историю просмотров. Эта информация используется для улучшения вашего взаимодействия с сайтом, ответа на ваши запросы и предоставления обновлений о наших услугах.</p>
+    <p class="color-black">Мы используем файлы cookie для улучшения функциональности сайта и анализа трафика. При желании вы можете отключить файлы cookie в настройках своего браузераp>
+    <p class="color-black">Мы не продаем и не передаем вашу личную информацию третьим лицам, за исключением случаев, когда это требуется по закону или для предоставления основных услуг (например, хостинга веб-сайта).</p>
+    <p class="color-black">Мы принимаем разумные меры для защиты ваших данных, но ни один метод передачи данных через интернет не является абсолютно безопасным.</p>
+    <p class="color-black">Используя наш веб-сайт, вы соглашаетесь с настоящей Политикой конфиденциальности. Если у вас возникнут какие-либо вопросы, пожалуйста, свяжитесь с нами через форму обратной связи.</p>
 </section>
 
 
@@ -410,26 +441,26 @@
     </section>
 
 
-    <footer>
+<footer>
         <div class="container">
         <div class="footer__nav">
             <div class="nav-buttom">
                 <svg class="logo--large">
                     <use href="#logo"></use>
                 </svg>
-                <a class="color-white" href="./index.html">About</a>
-                <a class="color-white" href="./map.html">Map</a>
-                <a class="color-white" href="./panda.html">Zoos</a>
-                <a class="color-white contact-us" href="#">Contact us</a>
-                <a class="color-white" href="#">design</a>
+                <a class="color-white" href="./index.html">Главная
+                <a class="color-white" href="./map.html">Карта
+                <a class="color-white" href="./panda.html">Зоопарк
+                <a class="color-white contact-us" href="#">Контакты
             </div>
             <div class="footer__author">
                 <p>Design by Lemeshko Kateryna</p>
                 <p>Front/Back Kirill Kovalev</p>
+                <p>&#169; OnlineZoo 2026</p>
             </div>
         </div>
         </div>
-    </footer>
+</footer>
 
 <div id="cookie-banner" class="cookie-banner">
   <div class="cookie-content">

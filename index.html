@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="./css/zoo.css">
 
     <link rel="shortcut icon" href="./images/content/panda-icon.png" type="image/x-icon">
+
+    <meta name="description" content="Онлайн зоопарк">
 
 
 
@@ -226,6 +228,12 @@
             </defs>
         </symbol>
 
+        <symbol id="icon-man" width="56px" height="56px" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28" cy="28" r="28" fill="#B9D5D9"/>
+            <path d="M28 18C25.2475 18 23 20.2475 23 23C23 25.7525 25.2475 28 28 28C30.7525 28 33 25.7525 33 23C33 20.2475 30.7525 18 28 18ZM28 19.5C29.9419 19.5 31.5 21.0581 31.5 23C31.5 24.9419 29.9419 26.5 28 26.5C26.0581 26.5 24.5 24.9419 24.5 23C24.5 21.0581 26.0581 19.5 28 19.5ZM21.9893 30C20.8994 30 20 30.8994 20 31.9893V32.75C20 34.5521 21.1396 35.9461 22.6533 36.7812C24.167 37.6164 26.0841 38 28 38C29.9159 38 31.833 37.6164 33.3467 36.7812C34.6373 36.0692 35.6087 34.9313 35.8809 33.5H36.001V31.9893C36.001 30.8994 35.1006 30 34.0107 30H21.9893ZM21.9893 31.5H34.0107C34.2898 31.5 34.501 31.7102 34.501 31.9893V32H34.5V32.75C34.5 33.9479 33.8271 34.8039 32.6221 35.4688C31.417 36.1336 29.7091 36.5 28 36.5C26.2909 36.5 24.583 36.1336 23.3779 35.4688C22.1729 34.8039 21.5 33.9479 21.5 32.75V31.9893C21.5 31.7102 21.7102 31.5 21.9893 31.5Z" fill="white"/>
+            <path d="M28 18C25.2475 18 23 20.2475 23 23C23 25.7525 25.2475 28 28 28C30.7525 28 33 25.7525 33 23C33 20.2475 30.7525 18 28 18ZM21.9893 30C20.8994 30 20 30.8994 20 31.9893V32.75C20 34.5521 21.1396 35.9461 22.6533 36.7812C24.167 37.6164 26.0841 38 28 38C29.9159 38 31.833 37.6164 33.3467 36.7812C34.6373 36.0692 35.6087 34.9313 35.8809 33.5H36.001V31.9893C36.001 30.8994 35.1006 30 34.0107 30H21.9893Z" fill="white"/>
+        </symbol>
+
 </svg>
 
     <header>
@@ -235,11 +243,10 @@
                     <svg class="logo--large">
                         <use href="#logo"></use>
                     </svg>
-                    <a class="color-white" href="./index.html">О нас</a>
+                    <a class="color-white" href="./index.html">Главная</a>
                     <a class="color-white" href="./map.html">Карта</a>
                     <a class="color-white" href="./panda.html">Зоопарки</a>
                     <a class="color-white contact-us" href="#">Свяжитесь с нами</a>
-                    <a class="color-white" href="#">Дизайн</a>
                 </nav>
 
                 <div id="auth-form" class="auth-form">
@@ -247,8 +254,13 @@
                     <a class="color-white sign-up" href="#">Регистрация</a>
                 </div>
                 <div id="dashboard" style="display:none;">
-                    <p>Добро пожаловать, <span id="userName"></span>!</p>
+                    <div class="dashboard__container">
+                    <svg class="icon--man">
+                        <use href="#icon-man"></use>
+                    </svg>
+                    <p id="userName"></p>
                     <button id="logout">Выйти</button>
+                    </div>
                 </div>
                 
                 <div class="burgermenu-icons">
@@ -268,12 +280,11 @@
         <span class="blur-effect"></span>
         <div class="container">
               <div class="burger-menu-block unactive-block">
-                    <a class="color-white" href="./index.html"><b>О нас</b></a>
+                    <a class="color-white" href="./index.html"><b>Главная</b></a>
                     <a class="color-white" href="./map.html"><b>Карта</b></a>
                     <a class="color-white" href="./panda.html"><b>Зоопарки</b></a>
                     <a class="color-white contact-us" href="#"><b>Свяжитесь с нами</b></a>
-                    <a class="color-white" href="#"><b>Дизайн</b></a>
-                    <a class="color-white log-in" href="#"><b>Мой аккаунт</b></a>
+                    <a id="log-in" class="color-white log-in" href="#"><b>Аккаунт</b></a>
                 </div>
 
         </div><!--container-->
@@ -400,9 +411,9 @@
                     <h1 class="hero-text">
                         Смотрите своих любимых <b>животных онлайн</b>
                     </h1>
-                    <p class="hero-text">Смотрите разных животных со всего мира в режиме реального времени. Помогите волонтерам ухаживать за животными, пожертвуйте вашим любимым.</p>
+                    <p class="hero-text">Смотрите разных животных со всего мира. Помогите волонтерам ухаживать за животными, пожертвуйте вашим любимым животным.</p>
                     <div class="mobil-section">
-                        <a class="hero__watch" href="./panda.html">Смотреть сейчас </a>
+                        <a class="hero__watch" href="./panda.html">Смотреть</a>
                         <a class="hero__donate donate-to-valunteers" href="#">Пожертвовать</a>
                     </div>
                 </div><!--hero__container-->
@@ -442,7 +453,7 @@
                             <use href="#how-it-work-icon-1"></use>
                         </svg>
                     </div>
-                    <p class="color-black">Следите за своими любимыми животными онлайн</p>
+                    <p class="color-black">Следите за своими любимыми животными</p>
                 </div>
                 <div class="howitwork__item">
                     <div class="circle">
@@ -483,7 +494,7 @@
     <section class="petsinzoo">
         <div class="container">
             <div class="petsinzoo__wrapper">
-                <h2 class="color-black">Животные в зоопарке </h2>
+                <h2 class="color-black">Зоопарки</h2>
                 <a class="color-black desctop-block" href="#">
                     <svg class="heart--icon">
                         <use href="#heart--icon"></use>
@@ -508,8 +519,8 @@
                     <span class="pets-line"></span>
                     <div class="pets__text">
                         <div>
-                            <h2>Pandas</h2>
-                            <p>Shenshuping Gengda Panda Center</p>
+                            <h2>Панда</h2>
+                            <p>Панда-центр Шэньшупин Генгда</p>
                         </div>
                           <svg class="tv--icon">
                             <use href="#tv--icon"></use>
@@ -530,8 +541,8 @@
                     <span class="pets-line"></span>
                     <div class="pets__text">
                         <div>
-                            <h2>Eagles</h2>
-                            <p>Catalina Island</p>
+                            <h2>Орлы</h2>
+                            <p>Остров Каталина</p>
                         </div>
                          <svg class="tv--icon">
                             <use href="#tv--icon"></use>
@@ -553,8 +564,8 @@
                     <span class="pets-line"></span>
                     <div class="pets__text">
                         <div>
-                            <h2>Penguins</h2>
-                            <p>Isla Tova</p>
+                            <h2>Пенгвины</h2>
+                            <p>Исла Това Аргентина</p>
                         </div>
                          <svg class="tv--icon">
                             <use href="#tv--icon"></use>
@@ -576,8 +587,8 @@
                     <span class="pets-line"></span>
                     <div class="pets__text">
                         <div>
-                            <h2>Gorillas</h2>
-                            <p>GRACE gorillas</p>
+                            <h2>Гориллы</h2>
+                            <p>GRACE Гориллы</p>
                         </div>
                          <svg class="tv--icon">
                             <use href="#tv--icon"></use>
@@ -599,8 +610,8 @@
                     <span class="pets-line"></span>
                     <div class="pets__text">
                         <div>
-                            <h2>Aligators</h2>
-                            <p>St. Augustine's Alligator Farm</p>
+                            <h2>Аллигаторы</h2>
+                            <p>Аллигаторная ферма Сент-Огастина</p>
                         </div>
                         <svg class="tv--icon">
                             <use href="#tv--icon"></use>
@@ -608,7 +619,7 @@
                     </div>
                 </a>
 
-                 <a href="#" class="gallery__item">
+                 <a href="./elephant.html" class="gallery__item">
             <svg class="pets-content" width="229" height="221" viewBox="0 0 229 221" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <clipPath id="pets-img">
@@ -622,8 +633,8 @@
                     <span class="pets-line"></span>
                     <div class="pets__text">
                         <div>
-                            <h2>Elephants</h2>
-                            <p>Tembe Elephant Park</p>
+                            <h2>Слоны</h2>
+                            <p>Слоновий парк Тембе</p>
                         </div>
                          <svg class="tv--icon">
                             <use href="#tv--icon"></use>
@@ -662,7 +673,7 @@
     </div>
     <div class="modal__content">
         <p class="color-black">
-            Поддержите своих любимых животных. Это как просто купить чашку кофе.
+            Поддержите своих любимых животных. Это как купить чашку кофе.
         </p>
          <form class="donate-form">
         
@@ -724,7 +735,7 @@
             <svg class="lock--icon">
                 <use href="#lock--icon"></use>
             </svg>
-            Your payment is protected
+            Ваш платеж защищен
         </div>
       </form>
     </div>
@@ -738,7 +749,7 @@
                 <img class="payandfeed-bamboo" src="./images/content/Bamboo.png" alt="bamboo">
                 <div class="container">
                     <div class="payandfeed__wrapper">
-                        <h2 class="color-white">Pay and feed</h2>
+                        <h2 class="color-white">Плати и корми</h2>
                         <a class="color-black payanddonate desctop-block donate-to-valunteers" href="#">Пожертвовать волонтерам</a>
                     </div>
 
@@ -750,7 +761,7 @@
                                     <use href="#donate-icon-1"></use>
                                 </svg>
                             </div>
-                            <p class="color-white">You donate to your favourite animals</p>
+                            <p class="color-white">Вы делаете пожертвования своим любимым животным.</p>
                         </div>
 
                         <div class="donate__arrow">
@@ -766,7 +777,7 @@
                                     <use href="#donate-icon-2"></use>
                                 </svg>
                             </div>
-                            <p class="color-white">Zoo Keepers feed animals with their favourite food</p>
+                            <p class="color-white">Сотрудники зоопарка кормят животных их любимой едой.</p>
                         </div>
 
                         <div class="donate__arrow">
@@ -782,7 +793,7 @@
                                     <use href="#donate-icon-3"></use>
                                 </svg>
                             </div>
-                            <p class="color-white">Animals are healthy and happy</p>
+                            <p class="color-white">Животные здоровы и счастливы.</p>
                         </div>
 
                     </div>
@@ -834,34 +845,34 @@
 
                 <div class="testimonials__item">
                     <div class="cloud-content">
-                        <span>20 Decepmer 2020</span>
-                        <p>Awesome place to observe my favourite aligators at Florida, the quality of the video is great. </p>
+                        <span>20 Декабря 2020</span>
+                        <p>Замечательное место во Флориде для наблюдения за моими любимыми аллигаторами, качество видео отличное. </p>
                     </div>
                     <div class="item__content">
                         <img src="./images/content/adam.png" alt="adam">
-                        <p>Adam, Spain</p>
+                        <p>Adam, Испания</p>
                     </div>
                 </div>
 
                    <div class="testimonials__item">
                     <div class="cloud-content">
-                        <span>20 Decepmer 2020</span>
-                        <p>Awesome place to observe my favourite aligators at Florida, the quality of the video is great. </p>
+                        <span>20 Декабря 2020</span>
+                        <p>Замечательное место во Флориде для наблюдения за моими любимыми аллигаторами, качество видео отличное. </p>
                     </div>
                     <div class="item__content">
                         <img src="./images/content/chris.png" alt="adam">
-                        <p>Chris, Australia</p>
+                        <p>Chris, Австралия</p>
                     </div>
                 </div>
 
                    <div class="testimonials__item">
                     <div class="cloud-content">
-                        <span>20 Decepmer 2020</span>
-                        <p>Awesome place to observe my favourite aligators at Florida, the quality of the video is great. </p>
+                        <span>20 Декабря 2020</span>
+                        <p>Замечательное место во Флориде для наблюдения за моими любимыми аллигаторами, качество видео отличное. </p>
                     </div>
                     <div class="item__content">
                         <img src="./images/content/amely.png" alt="adam">
-                        <p>Amely, USA</p>
+                        <p>Amely, США</p>
                     </div>
                 </div>
                
@@ -878,7 +889,7 @@
     <section class="beautifulanimals">
         <div class="container">
             <div class="beautifulanimals__wrapper">
-                <h2 class="color-black">Look at this beautiful animals</h2>
+                <h2 class="color-black">Посмотрите на этих прекрасных животных!</h2>
             </div>
 
             <div class="beautifulanimals__inner">
@@ -896,7 +907,7 @@
   </defs>
                      <image clip-path="url(#pets-img)" href="./images/content/pandas.png" width="229" height="221" />
                     </svg>
-                    <p>Pandas</p>
+                    <p>Панды</p>
                     </a>
 
                     <a class="beautifulanimals__item" href="./gorilla.html">
@@ -910,7 +921,7 @@
   </defs>
                      <image clip-path="url(#pets-img)" href="./images/content/gorillas.png" width="229" height="221" />
                     </svg>
-                    <p>Gorillas</p>
+                    <p>Гориллы</p>
                     </a>
 
                     <a class="beautifulanimals__item" href="./eagle.html">
@@ -924,7 +935,7 @@
   </defs>
                      <image clip-path="url(#pets-img)" href="./images/content/eagles.png" width="229" height="221" />
                     </svg>
-                    <p>Eagles</p>
+                    <p>Орлы</p>
                     </a>
 
                     <a class="beautifulanimals__item" href="./aligator.html">
@@ -938,7 +949,7 @@
   </defs>
                      <image clip-path="url(#pets-img)" href="./images/content/aligators.png" width="229" height="221" />
                     </svg>
-                    <p>Aligators</p>
+                    <p>Аллигаторы</p>
                     </a>
 
                     <a class="beautifulanimals__item" href="./elephant.html">
@@ -952,7 +963,7 @@
   </defs>
                      <image clip-path="url(#pets-img)" href="./images/content/elephantes.png" width="229" height="221" />
                     </svg>
-                    <p>elephants</p>
+                    <p>Слоны</p>
                     </a>
 
                     <a class="beautifulanimals__item" href="./penguin.html">
@@ -966,7 +977,7 @@
   </defs>
                      <image clip-path="url(#pets-img)" href="./images/content/penguine.png" width="229" height="221" />
                     </svg>
-                    <p>PENGUINS</p>
+                    <p>Пенгвины</p>
                     </a>
 
                     </div>
@@ -985,28 +996,28 @@
     </section>
 
 
-    <footer>
+<footer>
         <div class="container">
         <div class="footer__nav">
             <div class="nav-buttom">
                 <svg class="logo--large">
                     <use href="#logo"></use>
                 </svg>
-                <a class="color-white" href="./index.html">About</a>
-                <a class="color-white" href="./map.html">Map</a>
-                <a class="color-white" href="./panda.html">Zoos</a>
-                <a class="color-white contact-us" href="#">Contact us</a>
-                <a class="color-white" href="#">design</a>
+                <a class="color-white" href="./index.html">Главная
+                <a class="color-white" href="./map.html">Карта
+                <a class="color-white" href="./panda.html">Зоопарк
+                <a class="color-white contact-us" href="#">Контакты
             </div>
             <div class="footer__author">
                 <p>Design by Lemeshko Kateryna</p>
                 <p>Front/Back Kirill Kovalev</p>
+                <p>&#169; OnlineZoo 2026</p>
             </div>
         </div>
         </div>
-    </footer>
+</footer>
 
-    <div id="cookie-banner" class="cookie-banner">
+<div id="cookie-banner" class="cookie-banner">
   <div class="cookie-content">
     <p>
       Мы используем cookies для улучшения работы сайта. Вы можете принять или настроить их.

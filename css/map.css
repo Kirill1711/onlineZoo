@@ -1,5 +1,6 @@
 .map {
   background-color: #2A8086;
+  padding: 0.5em 0;
 }
 
 .map__title {
@@ -8,11 +9,12 @@
   font-family: 'Rubik';
   font-weight: 400;
   text-transform: uppercase;
+  margin: 0.5em 0;
 }
 
 .map__wrapper {
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
 }
 
@@ -70,6 +72,9 @@
   border-radius: 50%;
 }
 
+.panda-map {
+  position: relative;
+}
 
 @media screen and (max-width: 768px) {
   .map__title {

@@ -32,7 +32,7 @@
 
     <link rel="shortcut icon" href="./images/content/panda-icon.png" type="image/x-icon">
 
-    <title>Privacy Policy</title>
+    <title>Пользовательское соглашение</title>
 </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
@@ -224,6 +224,12 @@
             </defs>
         </symbol>
 
+        <symbol id="icon-man" width="56px" height="56px" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28" cy="28" r="28" fill="#B9D5D9"/>
+            <path d="M28 18C25.2475 18 23 20.2475 23 23C23 25.7525 25.2475 28 28 28C30.7525 28 33 25.7525 33 23C33 20.2475 30.7525 18 28 18ZM28 19.5C29.9419 19.5 31.5 21.0581 31.5 23C31.5 24.9419 29.9419 26.5 28 26.5C26.0581 26.5 24.5 24.9419 24.5 23C24.5 21.0581 26.0581 19.5 28 19.5ZM21.9893 30C20.8994 30 20 30.8994 20 31.9893V32.75C20 34.5521 21.1396 35.9461 22.6533 36.7812C24.167 37.6164 26.0841 38 28 38C29.9159 38 31.833 37.6164 33.3467 36.7812C34.6373 36.0692 35.6087 34.9313 35.8809 33.5H36.001V31.9893C36.001 30.8994 35.1006 30 34.0107 30H21.9893ZM21.9893 31.5H34.0107C34.2898 31.5 34.501 31.7102 34.501 31.9893V32H34.5V32.75C34.5 33.9479 33.8271 34.8039 32.6221 35.4688C31.417 36.1336 29.7091 36.5 28 36.5C26.2909 36.5 24.583 36.1336 23.3779 35.4688C22.1729 34.8039 21.5 33.9479 21.5 32.75V31.9893C21.5 31.7102 21.7102 31.5 21.9893 31.5Z" fill="white"/>
+            <path d="M28 18C25.2475 18 23 20.2475 23 23C23 25.7525 25.2475 28 28 28C30.7525 28 33 25.7525 33 23C33 20.2475 30.7525 18 28 18ZM21.9893 30C20.8994 30 20 30.8994 20 31.9893V32.75C20 34.5521 21.1396 35.9461 22.6533 36.7812C24.167 37.6164 26.0841 38 28 38C29.9159 38 31.833 37.6164 33.3467 36.7812C34.6373 36.0692 35.6087 34.9313 35.8809 33.5H36.001V31.9893C36.001 30.8994 35.1006 30 34.0107 30H21.9893Z" fill="white"/>
+        </symbol>
+
 </svg>
 
     <header>
@@ -233,21 +239,26 @@
                     <svg class="logo--large">
                         <use href="#logo"></use>
                     </svg>
-                    <a class="color-white" href="./index.html">About</a>
-                    <a class="color-white" href="./map.html">Map</a>
-                    <a class="color-white" href="./panda.html">Zoos</a>
-                    <a class="color-white contact-us" href="#">Contact us</a>
-                    <a class="color-white" href="#">Design</a>
+                    <a class="color-white" href="./index.html">Главная</a>
+                    <a class="color-white" href="./map.html">Карта</a>
+                    <a class="color-white" href="./panda.html">Зоопарки</a>
+                    <a class="color-white contact-us" href="#">Свяжитесь с нами</a>
                 </nav>
 
-                <div class="auth-form">
+                <div id="auth-form" class="auth-form">
                     <a class="color-white log-in" href="#">Вход</a>
-                    <a class="color-white sign-up" href="#">Sign up</a>
+                    <a class="color-white sign-up" href="#">Регистрация</a>
                 </div>
                 <div id="dashboard" style="display:none;">
-                    <p>Добро пожаловать, <span id="userName"></span>!</p>
+                    <div class="dashboard__container">
+                    <svg class="icon--man">
+                        <use href="#icon-man"></use>
+                    </svg>
+                    <p id="userName"></p>
                     <button id="logout">Выйти</button>
+                    </div>
                 </div>
+                
                 <div class="burgermenu-icons">
                     <div class="open-burger active-burger">
                         <span></span>
@@ -265,12 +276,11 @@
         <span class="blur-effect"></span>
         <div class="container">
               <div class="burger-menu-block unactive-block">
-                    <a class="color-white" href="./index.html"><b>About</b></a>
-                    <a class="color-white" href="./map.html"><b>Map</b></a>
-                    <a class="color-white" href="./panda.html"><b>Zoos</b></a>
-                    <a class="color-white contact-us" href="#"><b>Contact us</b></a>
-                    <a class="color-white" href="#"><b>Design</b></a>
-                    <a class="color-white log-in" href="#"><b>My account</b></a>
+                    <a class="color-white" href="./index.html"><b>Главная</b></a>
+                    <a class="color-white" href="./map.html"><b>Карта</b></a>
+                    <a class="color-white" href="./panda.html"><b>Зоопарки</b></a>
+                    <a class="color-white contact-us" href="#"><b>Свяжитесь с нами</b></a>
+                    <a id="log-in" class="color-white log-in" href="#"><b>Аккаунт</b></a>
                 </div>
 
         </div><!--container-->
@@ -325,6 +335,7 @@
 
     </div>
 </div><!--modal__create-account-->
+
 
 <div id="authForm" class="modal__auth modal-unactive">
 	<div class="modal__header">
@@ -387,38 +398,61 @@
     </div>
 </div><!--modal__contact-us-->
 
+
+    <div class="modal__leave-feedback modal-unactive">
+    <div class="modal__leave-feedback-header">
+        <h2 class="color-black">Оставить отзыв</h2>
+    </div>
+    <div class="modal__content">
+         <form class="feedback-form">
+        <label class="color-black">ИМЯ</label>
+        <input type="text" />
+
+        <label class="color-black">EMAIL</label>
+        <input type="email" />
+
+        <label class="color-black">ВАШЕ СООБЩЕНИЕ</label>
+        <textarea rows="5" type="text"></textarea>
+
+        <button class="submit-btn">ОТПРАВИТЬ</button>
+      </form>
+    </div>
+</div>
+
 <section class="privacy-policy">
     <h2  class="color-black">Пользовательское соглашение</h2>
 
-<h2  class="color-black">Welcome to our Online Zoo. By accessing and using this website, you agree to comply with the following terms and conditions.</h2>
+<h2  class="color-black">
 
-<p class="color-black">1. Use of the Website</p>
-<p class="color-black">You agree to use the website for lawful purposes only. You must not use the site in any way that may damage, disable, or interfere with its functionality or security.</p>
-<p  class="color-black">2. Intellectual Property</p>
-<p  class="color-black">All content on this website, including text, images, videos, and logos, is the property of the Online Zoo or its licensors and is protected by copyright laws. You may not copy, distribute, or use any content without permission.</p>
-<p  class="color-black">3. User Conduct</p>
-<p  class="color-black">You agree not to:</p>
+Добро пожаловать в наш онлайн-зоопарк. Получая доступ к этому сайту и используя его, вы соглашаетесь соблюдать следующие условия.</h2>
+
+<p class="color-black">1. Использование веб-сайта</p>
+<p class="color-black">Вы соглашаетесь использовать веб-сайт только в законных целях. Вы не должны использовать сайт каким-либо образом, который может повредить, вывести из строя или помешать его функциональности или безопасности.
+<p class="color-black">2. Правила и Политика конфиденциальности</p>
+<p  class="color-black">Весь контент на этом веб-сайте, включая текст, изображения, видео и логотипы, является собственностью Online Zoo или его лицензиаров и защищен законами об авторском праве. Вы не имеете права копировать, распространять или использовать какой-либо контент без разрешения..</p>
+<p  class="color-black">3. Поведение пользователей</p>
+<p  class="color-black">Вы соглашаетесь не делать следующее</p>
 <ul>
-    <li  class="color-black">Post or share harmful, offensive, or illegal content</li>
-    <li  class="color-black">Attempt to gain unauthorized access to the website or its systems</li>
-    <li class="color-black">Use the site for fraudulent or misleading purposes</li>
+    <li  class="color-black">Размещайте или распространяйте вредоносный, оскорбительный или незаконный контент.</li>
+    <li  class="color-black">Попытка несанкционированного доступа к веб-сайту или его системам.</li>
+    <li class="color-black">Использование сайта в мошеннических или вводящих в заблуждение целях.</li>
 </ul>
-<p class="color-black">4. Accounts</p>
+<p class="color-black">4. Аккаунты</p>
 
-<p class="color-black">If you create an account, you are responsible for maintaining the confidentiality of your login information and for all activities under your account.</p>
-<p class="color-black">5. Third-Party Links</p>
-<p class="color-black">The website may contain links to third-party websites. We are not responsible for the content or practices of those sites.</p>
-<p class="color-black">6. Disclaimer</p>
-<p class="color-black">The website and its content are provided “as is” without warranties of any kind. We do not guarantee that the website will be error-free or uninterrupted.</p>
-<p class="color-black"> 7. Limitation of Liability</p>
-<p class="color-black">We are not liable for any damages arising from your use of the website, including loss of data or service interruptions.</p>
-<p class="color-black">8. Changes to Terms</p>
-<p class="color-black">We reserve the right to update or modify these terms at any time. Continued use of the website means you accept the updated terms.</p>
-<p class="color-black">9. Governing Law</p>
-<p class="color-black">These terms are governed by applicable laws. Any disputes will be resolved in accordance with local regulations.</p>
-<p class="color-black">10. Contact Information</p>
-<p class="color-black">If you have any questions about these Terms, please contact us.</p>
-<p class="color-black">By using this website, you acknowledge that you have read and agree to this User Agreement.</p>
+<p class="color-black">Создавая учетную запись, вы несете ответственность за сохранение конфиденциальности ваших учетных данных и за все действия, совершаемые с использованием вашей учетной записи.</p>
+<p class="color-black">5. Ссылки на сторонние ресурс</p>
+<p class="color-black">Данный веб-сайт может содержать ссылки на сторонние веб-сайты. Мы не несем ответственности за содержание или действия этих сайтов.</p>
+<p class="color-black">6. Отказ от ответственности</p>
+<p class="color-black">Веб-сайт и его содержимое предоставляются «как есть», без каких-либо гарантий. Мы не гарантируем, что веб-сайт будет работать без ошибок или перебоев..</p>
+<p class="color-black"> 7. Ограничение ответственности</p>
+<p class="color-black">Мы не несем ответственности за любые убытки, возникшие в результате использования вами веб-сайта, включая потерю данных или перебои в работе сервиса.</p>
+<p class="color-black">8. Изменения в Условиях</p>
+<p class="color-black">Мы оставляем за собой право обновлять или изменять настоящие условия в любое время. Продолжение использования веб-сайта означает ваше согласие с обновленными условиями.</p>
+<p class="color-black">9. Применимое право</p>
+<p class="color-black">Настоящие условия регулируются действующим законодательством. Любые споры будут разрешаться в соответствии с местными нормативными актами.</p>
+<p class="color-black">10. Контактная информация</p>
+<p class="color-black">Если у вас возникнут какие-либо вопросы относительно данных Условий, пожалуйста, свяжитесь с нами..</p>
+<p class="color-black">Используя этот веб-сайт, вы подтверждаете, что прочитали и согласны с настоящим Пользовательским соглашением.</p>
 
 
 </section>
@@ -436,26 +470,26 @@
     </section>
 
 
-    <footer>
+<footer>
         <div class="container">
         <div class="footer__nav">
             <div class="nav-buttom">
                 <svg class="logo--large">
                     <use href="#logo"></use>
                 </svg>
-                <a class="color-white" href="./index.html">About</a>
-                <a class="color-white" href="./map.html">Map</a>
-                <a class="color-white" href="./panda.html">Zoos</a>
-                <a class="color-white contact-us" href="#">Contact us</a>
-                <a class="color-white" href="#">design</a>
+                <a class="color-white" href="./index.html">Главная
+                <a class="color-white" href="./map.html">Карта
+                <a class="color-white" href="./panda.html">Зоопарк
+                <a class="color-white contact-us" href="#">Контакты
             </div>
             <div class="footer__author">
                 <p>Design by Lemeshko Kateryna</p>
                 <p>Front/Back Kirill Kovalev</p>
+                <p>&#169; OnlineZoo 2026</p>
             </div>
         </div>
         </div>
-    </footer>
+</footer>
 
 <div id="cookie-banner" class="cookie-banner">
   <div class="cookie-content">

@@ -1,5 +1,4 @@
 
-
 .container {
     width: 1570px;
     height: 100%;
@@ -94,7 +93,11 @@ h2 {
 .btn.decline:hover {
   background: #333;
 }
-
+.icon--man {
+    width: 56px;
+    height: 56px;
+    display: block;
+}
 
 @media screen and (max-width: 1600px) {
     .container {
@@ -129,6 +132,9 @@ h2 {
 @media screen and (max-width: 768px) {
     .container {
         width: 640px;
+    }
+    .icon--man {
+        display: none;
     }
 }
 
